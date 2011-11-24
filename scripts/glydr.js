@@ -1,6 +1,6 @@
 (function(){
   var $ = jQuery;
-  var player;
+  var player,player1;
   var inputControls = {};
 
   function webGLStart(){
@@ -20,8 +20,8 @@
     CubicVR.addResizeable(scene);
 
     player1 = players.spawn(scene,physics,[0,0,0]);
-	player1.applyForce([0,-3,0],[0,0,0]);
-    player = players.spawn(scene,physics,[10,0,10]);
+//	player1.applyForce([0,-3,0],[0,0,0]);
+    player = players.spawn(scene,physics,[0,0,10]);
 
 //	camera1 = new CubicVR.Camera({
 //		width:canvas.width/2,
@@ -53,23 +53,27 @@
 	  scene.camera.position = [playerPos[0]+.2,playerPos[1]+5,playerPos[2]];
 
       var seconds = timer.getSeconds();
-      var roundedSecond = Math.floor(seconds);
+      var roundedSecond = Math.floor(seconds)
       if(roundedSecond%1 == 0 && roundedSecond != obstacleSpawnTime){
         obstacleSpawnTime = roundedSecond;
+        obstacles.spawn(scene,physics,player1);
         obstacles.spawn(scene,physics,player);
       }
-      if(roundedSecond%5 == 0 && roundedSecond != playerPush){
-        playerPush = roundedSecond;
-        player.applyForce([0,-3,0],[0,0,0]);
-      }
-	  players._updatePlayerControls(player);
 
       physics.stepSimulation(timer.getLastUpdateSeconds());
+	  physics.triggerEvents();
+	  scene.runEvents(seconds);
+	  scene.camera.resize(canvas.width/2, canvas.height);
+	  gl.viewport(0,0,canvas.width/2, canvas.height);
       scene.render();
 
+	  var playerPos = player1.getSceneObject().position.slice(0);
+	  scene.camera.target = playerPos;
+	  scene.camera.position = [playerPos[0]+.2,playerPos[1]+5,playerPos[2]];
+	  scene.camera.resize(canvas.width/2, canvas.height);
+	  gl.viewport(canvas.width/2,0,canvas.width/2, canvas.height);
+      scene.render();
 	    
-
-
     });
   }
 

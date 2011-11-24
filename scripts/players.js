@@ -1,3 +1,4 @@
+var hasTicked = 0;
 var players = {
 	playerCount:0,
 	spawn:function(scene, physics,location) {
@@ -45,11 +46,17 @@ var players = {
 		var This = this;
 		rigidBox.getSceneObject().addEvent({
 			id: "tick",
+			interval: 1/10,
 			action: function(event){
-				console.log("Ticking");
 				This._updatePlayerControls(rigidBox);
-			},
-			enabled:true
+			}
+		});
+		rigidBox.getSceneObject().addEvent({
+			id: "tick",
+			interval: 5,
+			action: function(event){
+				rigidBox.applyForce([0,-3,0],[0,0,0]);
+			}
 		});
 
 		return rigidBox;
@@ -106,47 +113,32 @@ var players = {
 		}
 	},
 	_addListeners:function(player) {
+		var keyMap = { //Arrow Keys
+			37:'left',
+			38:'up',
+			39:'right',
+			40:'down'
+		};
+		if(players.playerCount == 2){
+			var keyMap = { //WASD
+				65:'left',
+				87:'up',
+				68:'right',
+				83:'down'
+			};
+		}
+
 		window.addEventListener('keydown', function(event) {
 			var inputControls = player.getSceneObject().getProperty('inputControls');
-			switch (event.keyCode) {
-				case 37: // Left
-					if (typeof inputControls.left == 'undefined') {
-						inputControls.left = 0;
-					}
-					break;
-				case 38: // Up
-					if (typeof inputControls.up == 'undefined') {
-						inputControls.up = 0;
-					}
-					break;
-				case 39: // Right
-					if (typeof inputControls.right == 'undefined') {
-						inputControls.right = 0;
-					}
-					break;
-				case 40: // Down
-					if (typeof inputControls.down == 'undefined') {
-						inputControls.down = 0;
-					}
-					break;
+			if( typeof keyMap[event.keyCode] != 'undefined'){
+				inputControls[keyMap[event.keyCode]] = 0;
 			}
 			player.getSceneObject().setProperty('inputControls',inputControls);
 		}, false);
 		window.addEventListener('keyup', function(event) {
 			var inputControls = player.getSceneObject().getProperty('inputControls');
-			switch (event.keyCode) {
-				case 37: // Left
-					delete inputControls.left;
-					break;
-				case 38: // Up
-					delete inputControls.up;
-					break;
-				case 39: // Right
-					delete inputControls.right;
-					break;
-				case 40: // Down
-					delete inputControls.down;
-					break;
+			if( typeof keyMap[event.keyCode] != 'undefined'){
+				delete inputControls[keyMap[event.keyCode]];
 			}
 			player.getSceneObject().setProperty('inputControls',inputControls);
 		}, false);
