@@ -30,7 +30,6 @@ var players = {
 		});
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
-		scene.bind(box);
 
 		var rigidBox = new CubicVR.RigidBody(box, {
 			type: 'dynamic',
@@ -39,7 +38,7 @@ var players = {
 				size: box.scale
 			}
 		});
-		physics.bind(rigidBox);
+		rigidBox.activate();
 		
 		box.setProperty('inputControls',{});
 		this._addListeners(rigidBox);
@@ -59,6 +58,8 @@ var players = {
 			}
 		});
 
+		scene.bind(box);
+		physics.bind(rigidBox);
 		return rigidBox;
 	},
 	_updatePlayerControls:function(player) {

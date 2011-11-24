@@ -40,6 +40,15 @@ var obstacles = {
 		});
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
+
+		box.addEvent({
+			id: CubicVR.enums.event.CONTACT_GHOST,
+			action: function(event,handler){
+				event.event_properties.contacts[0].sceneObject.position = [0,0,0];
+				console.log(event,handler);
+			}
+		});
+
 		scene.bind(box);
 
 		var rigidBox = new CubicVR.RigidBody(box, {
