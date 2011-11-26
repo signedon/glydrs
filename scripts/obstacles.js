@@ -2,8 +2,8 @@ var obstacles = {
 	spawn: function(scene,physics,player) {
 		var position = player.getSceneObject().position.slice(0);
 		position[1] -= 10;
-    position[0] +=(Math.random()*10)-10;
-    position[2] +=(Math.random()*10)-10;
+    position[0] +=(Math.random()-.5)*10;
+    position[2] +=(Math.random()-.5)*10;
 		var lastObstacleHeight = player.getSceneObject().getProperty('lastObstacleHeight');
 		if(typeof lastObstacleHeight == 'undefined'){
 			lastObstacleHeight = 0;
