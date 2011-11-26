@@ -18,6 +18,7 @@ var obstacles = {
 		var material = new CubicVR.Material({
 			textures: {
 				color: "/cubicvr/samples/images/6583-diffuse.jpg"
+//        color:videoTexture
 			}
 		});
 

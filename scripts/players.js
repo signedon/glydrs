@@ -50,9 +50,12 @@ var players = {
 		});
 		rigidBox.getSceneObject().addEvent({
 			id: "tick",
-			interval: 5,
+			interval: 1/10,
 			action: function(event){
-				rigidBox.applyForce([0,-3,0],[0,0,0]);
+		    var velocity = rigidBox.getLinearVelocity();
+        if(velocity[1] > -8){
+          rigidBox.applyForce([0,-1,0],[0,0,0]);
+        }
 			}
 		});
 
@@ -71,18 +74,18 @@ var players = {
       player.applyForce([0,0,controls.axes.Left_Stick_X*-1*modifier],[0,0,0]);
     }
 
-		if (Math.floor(velocity[0]) != 0) {
+		if (Math.abs(velocity[0]) > 1) {
 			if (velocity[0] > 0) {
 				player.applyForce([-1,0,0], [0,0,0]);
 			} else {
 				player.applyForce([1,0,0], [0,0,0]);
 			}
 		}
-		if (Math.floor(velocity[2]) != 0) {
+		if (Math.abs(velocity[2]) > 1) {
 			if (velocity[2] > 0) {
 				player.applyForce([0,0,-1], [0,0,0]);
 			} else {
-				player.applyForce([0,0,.1], [0,0,0]);
+				player.applyForce([0,0,1], [0,0,0]);
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 var gamepads = [];
 var numKeyboards = 1;
+var gamePlaying = false;
 
 jQuery(document).ready(function(){
   window.addEventListener("MozGamepadConnected", function(e) {
@@ -137,9 +138,12 @@ jQuery(document).ready(function(){
   }
 
   function startGame(){
-    jQuery('.instructions').html("Starting game with "+gamepads.length+" players.");
-    jQuery('.playerDisplay').html('');
-    glydrs();
+    if(!gamePlaying){
+      gamePlaying = true;
+      jQuery('.instructions').html("Starting game with "+gamepads.length+" players.");
+      jQuery('.playerDisplay').html('');
+      setTimeout('glydrs()',100);
+    }
   }
 
   function updateControllerCount(){

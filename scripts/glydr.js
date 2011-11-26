@@ -11,6 +11,17 @@ var glydrs = function(){
       return;
     };
 
+
+//    var video = document.getElementById('video');
+//    videoTexture = new CubicVR.CanvasTexture(video);
+//
+//    video.addEventListener('canplay', function(e) {
+//      video.play();
+//    }, false);
+
+    
+
+
     var physics = new CubicVR.ScenePhysics();
     physics.setGravity([0,0,0]);
     var scene = new CubicVR.Scene(canvas.width, canvas.height, 80);
