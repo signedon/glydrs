@@ -1,4 +1,4 @@
-(function(){
+var glydrs = function(){
   var $ = jQuery;
   var playerArray = [];
   var inputControls = {};
@@ -14,16 +14,14 @@
     var physics = new CubicVR.ScenePhysics();
     physics.setGravity([0,0,0]);
     var scene = new CubicVR.Scene(canvas.width, canvas.height, 80);
-	scene.camera.setTargeted(true);
+	  scene.camera.setTargeted(true);
 	  
     // Add our camera to the window resize list
     CubicVR.addResizeable(scene);
-
-    playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length]));
-//    playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length]));
-//    playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length]));
-
-
+    
+    for(i=0;i<gamepads.length;i++){
+      playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
+    }
 
     var obstacleSpawnTime = -1;
     var playerPush = -1;
@@ -36,9 +34,9 @@
 	    for(var i=0;i<playerArray.length;i++){
             obstacles.spawn(scene,physics,playerArray[i]);
 	    }
-      }
+    }
 
-      physics.stepSimulation(timer.getLastUpdateSeconds());
+    physics.stepSimulation(timer.getLastUpdateSeconds());
 	  physics.triggerEvents();
 	  scene.runEvents(seconds);
 
@@ -56,4 +54,4 @@
   $(document).ready(function(){
     webGLStart();
   });
-})();
+}
