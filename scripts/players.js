@@ -49,16 +49,6 @@ var players = {
 				This._applyPlayerForces(rigidBox,controls);
 			}
 		});
-		rigidBox.getSceneObject().addEvent({
-			id: "tick",
-			interval: 1/10,
-			action: function(event){
-		    var velocity = rigidBox.getLinearVelocity();
-        if(velocity[1] > -8){
-          rigidBox.applyForce([0,-1,0],[0,0,0]);
-        }
-			}
-		});
 
 		scene.bind(box);
 		physics.bind(rigidBox);
@@ -67,8 +57,14 @@ var players = {
 	_applyPlayerForces:function(player,controls) {
 		var angularVelocity = player.getAngularVelocity();
     var velocity = player.getLinearVelocity();
+    var terminalVelocity = -8;
+    var maxVelocity = 20;
     if(angularVelocity[0] == 0 && angularVelocity[1] == 0 && angularVelocity[2] == 0){
-      var maxVelocity = 20;
+      if(controls.buttons.A_Button == 1){
+        terminalVelocity = -16;
+        maxVelocity = 7;
+      }
+
       var modifier = 2;
       if (Math.abs(velocity[0]) < maxVelocity) {
         player.applyForce([controls.axes.Left_Stick_Y*modifier,0,0], [0,0,0]);
@@ -80,7 +76,12 @@ var players = {
       //[forward/back, left/right,twist]
       player.setRotationEuler([velocity[0]*-2+Math.random()*2,velocity[2]*2+Math.random()*2,Math.random()*2]);
     }
-
+    if(velocity[1] > terminalVelocity){
+      player.applyForce([0,-.2,0],[0,0,0]);
+    }else{
+      player.applyForce([0,.2,0],[0,0,0]);
+    }
+    
     if (Math.abs(velocity[0]) > 1) {
       if (velocity[0] > 0) {
         player.applyForce([-1,0,0], [0,0,0]);

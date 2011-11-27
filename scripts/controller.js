@@ -1,3 +1,13 @@
+/*
+*
+* Left stick is up/down left/right for movement
+* A button (shift for left player, control for right player) is speed boost. Warning, you lose a lot of control with it.
+* 
+*
+* */
+
+
+
 var fastStart = false;//This will auto launch the game!
 
 
@@ -43,7 +53,7 @@ jQuery(document).ready(function(){
         alert("You must have at least one player!");
       }
     }
-  }, false);
+  }, true);
 
   function getNewKeyboardControl(){
 		var keyboardControlObj = {
@@ -106,6 +116,11 @@ jQuery(document).ready(function(){
           'type':'buttons',
           'label':'Start_Button',
           'value':1
+        },
+        16:{//shift
+          'type':'buttons',
+          'label':'A_Button',
+          'value':1
         }
       };
     }else if(numKeyboards == 1){
@@ -133,6 +148,11 @@ jQuery(document).ready(function(){
         13:{//enter
           'type':'buttons',
           'label':'Start_Button',
+          'value':1
+        },
+        17:{//ctrl
+          'type':'buttons',
+          'label':'A_Button',
           'value':1
         }
       };
