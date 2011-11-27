@@ -7,13 +7,16 @@ var tube = {
 		});
 		var mesh = new CubicVR.Mesh({
 			primitive: {
-				type: "cylinder",
-				radius: 1,
-        height:1,
+				type: "torus",
+				innerRadius:.9,
+				outerRadius:1,
+				lon:5,
+				lat:5,
 				material: material,
 				uvmapper: {
-					projectionMode: "cylindrical",
-					scale: [1, 1, 1]
+					projectionMode: "planar",
+					projectionAxis: "x",
+					scale: [0.5, 0.5, 0.5]
 				}
 			},
 			compile: true
@@ -21,21 +24,21 @@ var tube = {
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:[0,-10,0],
-			scale:[1000,100,100]
+			scale:[20,9000,20]
 		});
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
-		var rigidBox = new CubicVR.RigidBody(box, {
-			type: 'static',
-			collision: {
-				type: CubicVR.enums.collision.shape.CYLINDER,
-				size: box.scale
-			},
-			blocker:true
-		});
+//		var rigidBox = new CubicVR.RigidBody(box, {
+//			type: 'static',
+//			collision: {
+//				type: CubicVR.enums.collision.shape.CONVEX_HULL,
+//				size: box.scale
+//			},
+//			blocker:true
+//		});
 
 		scene.bind(box);
-		physics.bind(rigidBox);
-		return rigidBox;
+//		physics.bind(rigidBox);
+//		return rigidBox;
   }
 }

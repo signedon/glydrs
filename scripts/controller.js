@@ -1,5 +1,8 @@
+var fastStart = false;//This will auto launch the game!
+
+
 var gamepads = [];
-var numKeyboards = 1;
+var numKeyboards = 0;
 var gamePlaying = false;
 
 jQuery(document).ready(function(){
@@ -18,9 +21,15 @@ jQuery(document).ready(function(){
   window.addEventListener("MozGamepadButtonDown", function(e) { buttonHandler(e, true); }, false);
   window.addEventListener("MozGamepadButtonUp", function(e) { buttonHandler(e, false); }, false);
 
+  if(fastStart){
+	numKeyboards++;
+	getNewKeyboardControl();
+	updateControllerCount();
+	  startGame();
+  }
   window.addEventListener('keyup', function(event) {
     if(event.keyCode == 32){ //space
-      if( numKeyboards<3){
+      if( numKeyboards<2){
         numKeyboards++;
         getNewKeyboardControl();
         updateControllerCount();

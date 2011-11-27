@@ -9,7 +9,8 @@ var players = {
 		var material = new CubicVR.Material({
 			textures: {
 				color: "/cubicvr/samples/images/6583-diffuse.jpg"
-			}
+			},
+			opacity:.9
 		});
 		var mesh = new CubicVR.Mesh({
 			primitive: {

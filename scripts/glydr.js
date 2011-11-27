@@ -30,7 +30,7 @@ var glydrs = function(){
     // Add our camera to the window resize list
     CubicVR.addResizeable(scene);
 
-//    tube.create(scene,physics);
+    tube.create(scene,physics);
     
     for(i=0;i<gamepads.length;i++){
       playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
