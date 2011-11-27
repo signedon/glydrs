@@ -26,7 +26,7 @@ var players = {
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:location,
-			scale:[1,1,1]
+			scale:[1.3,.5,1]
 		});
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
@@ -43,7 +43,7 @@ var players = {
 		var This = this;
 		rigidBox.getSceneObject().addEvent({
 			id: "tick",
-			interval: 1/10,
+			interval: 1/100,
 			action: function(event){
 				This._applyPlayerForces(rigidBox,controls);
 			}
@@ -54,7 +54,7 @@ var players = {
 			action: function(event){
 		    var velocity = rigidBox.getLinearVelocity();
         if(velocity[1] > -8){
-          rigidBox.applyForce([0,-1,0],[0,0,0]);
+//          rigidBox.applyForce([0,-1,0],[0,0,0]);
         }
 			}
 		});
@@ -88,5 +88,12 @@ var players = {
 				player.applyForce([0,0,1], [0,0,0]);
 			}
 		}
+
+		var angularVelocity = player.getAngularVelocity();
+    if(angularVelocity[0] == 0 && angularVelocity[1] == 0 && angularVelocity[2] == 0){
+      //[forward/back, left/right,twist]
+      player.setRotationEuler([velocity[0]*-2+Math.random()*2,velocity[2]*2+Math.random()*2,Math.random()*2]);
+    }
+
 	}
 };
