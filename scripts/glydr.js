@@ -45,7 +45,7 @@ var glydrs = function(){
       if(roundedSecond%1 == 0 && roundedSecond != obstacleSpawnTime){
         obstacleSpawnTime = roundedSecond;
 	    for(var i=0;i<playerArray.length;i++){
-            obstacles.spawn(scene,physics,playerArray[i]);
+        obstacles.spawn(scene,physics,playerArray[i]);
 	    }
     }
 
