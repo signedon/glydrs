@@ -18,13 +18,24 @@ jQuery(document).ready(function(){
   window.addEventListener("MozGamepadButtonDown", function(e) { buttonHandler(e, true); }, false);
   window.addEventListener("MozGamepadButtonUp", function(e) { buttonHandler(e, false); }, false);
 
+  window.addEventListener('keyup', function(event) {
+    if(event.keyCode == 32){ //space
+      if( numKeyboards<3){
+        numKeyboards++;
+        getNewKeyboardControl();
+        updateControllerCount();
+      }else{
+        alert('Only 2 keyboard players are allowed at this time.');
+      }
+    }else if(event.keyCode == 13){
+      if(gamepads.length > 0){
+        startGame();
+      }else{
+        alert("You must have at least one player!");
+      }
+    }
+  }, false);
 
-
-  for(var i=0;i<numKeyboards;i++){
-    getNewKeyboardControl();
-    updateControllerCount();
-  }
-  
   function getNewKeyboardControl(){
 		var keyboardControlObj = {
       'axes' : {
@@ -61,6 +72,34 @@ jQuery(document).ready(function(){
       }
     }
     if(numKeyboards == 0){
+      var keyMap = { //WASD Keys
+        65:{//left
+          'type':'axes',
+          'label':'Left_Stick_X',
+          'value':-1
+        },
+        87:{//up
+          'type':'axes',
+          'label':'Left_Stick_Y',
+          'value':-1
+        },
+        68:{//right
+          'type':'axes',
+          'label':'Left_Stick_X',
+          'value':1
+        },
+        83:{//down
+          'type':'axes',
+          'label':'Left_Stick_Y',
+          'value':1
+        },
+        13:{//enter
+          'type':'buttons',
+          'label':'Start_Button',
+          'value':1
+        }
+      };
+    }else if(numKeyboards == 1){
       var keyMap = { //Arrow Keys
         37:{//left
           'type':'axes',
@@ -88,43 +127,12 @@ jQuery(document).ready(function(){
           'value':1
         }
       };
-    }else if(numKeyboards == 1){
-      var keyMap = { //Arrow Keys
-        65:{//left
-          'type':'axes',
-          'label':'Left_Stick_X',
-          'value':-1
-        },
-        87:{//up
-          'type':'axes',
-          'label':'Left_Stick_Y',
-          'value':-1
-        },
-        68:{//right
-          'type':'axes',
-          'label':'Left_Stick_X',
-          'value':1
-        },
-        83:{//down
-          'type':'axes',
-          'label':'Left_Stick_Y',
-          'value':1
-        },
-        13:{//enter
-          'type':'buttons',
-          'label':'Start_Button',
-          'value':1
-        }
-      };
     }
 
     window.addEventListener('keydown', function(event) {
 			if( typeof keyMap[event.keyCode] != 'undefined'){
         var keyMapping = keyMap[event.keyCode];
 				keyboardControlObj[keyMapping.type][keyMapping.label] = keyMapping.value;
-        if(keyMapping.label == 'Start_Button'){
-          startGame();
-        }
 			}
 		}, false);
 		window.addEventListener('keyup', function(event) {
