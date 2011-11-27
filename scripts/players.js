@@ -54,7 +54,7 @@ var players = {
 			action: function(event){
 		    var velocity = rigidBox.getLinearVelocity();
         if(velocity[1] > -8){
-//          rigidBox.applyForce([0,-1,0],[0,0,0]);
+          rigidBox.applyForce([0,-1,0],[0,0,0]);
         }
 			}
 		});
@@ -64,35 +64,35 @@ var players = {
 		return rigidBox;
 	},
 	_applyPlayerForces:function(player,controls) {
-		var velocity = player.getLinearVelocity();
-    var maxVelocity = 20;
-    var modifier = 2;
-    if (Math.abs(velocity[0]) < maxVelocity) {
-      player.applyForce([controls.axes.Left_Stick_Y*modifier,0,0], [0,0,0]);
-    }
-    if (Math.abs(velocity[2]) < maxVelocity) {
-      player.applyForce([0,0,controls.axes.Left_Stick_X*-1*modifier],[0,0,0]);
-    }
-
-		if (Math.abs(velocity[0]) > 1) {
-			if (velocity[0] > 0) {
-				player.applyForce([-1,0,0], [0,0,0]);
-			} else {
-				player.applyForce([1,0,0], [0,0,0]);
-			}
-		}
-		if (Math.abs(velocity[2]) > 1) {
-			if (velocity[2] > 0) {
-				player.applyForce([0,0,-1], [0,0,0]);
-			} else {
-				player.applyForce([0,0,1], [0,0,0]);
-			}
-		}
-
 		var angularVelocity = player.getAngularVelocity();
+    var velocity = player.getLinearVelocity();
     if(angularVelocity[0] == 0 && angularVelocity[1] == 0 && angularVelocity[2] == 0){
+      var maxVelocity = 20;
+      var modifier = 2;
+      if (Math.abs(velocity[0]) < maxVelocity) {
+        player.applyForce([controls.axes.Left_Stick_Y*modifier,0,0], [0,0,0]);
+      }
+      if (Math.abs(velocity[2]) < maxVelocity) {
+        player.applyForce([0,0,controls.axes.Left_Stick_X*-1*modifier],[0,0,0]);
+      }
+
       //[forward/back, left/right,twist]
       player.setRotationEuler([velocity[0]*-2+Math.random()*2,velocity[2]*2+Math.random()*2,Math.random()*2]);
+    }
+
+    if (Math.abs(velocity[0]) > 1) {
+      if (velocity[0] > 0) {
+        player.applyForce([-1,0,0], [0,0,0]);
+      } else {
+        player.applyForce([1,0,0], [0,0,0]);
+      }
+    }
+    if (Math.abs(velocity[2]) > 1) {
+      if (velocity[2] > 0) {
+        player.applyForce([0,0,-1], [0,0,0]);
+      } else {
+        player.applyForce([0,0,1], [0,0,0]);
+      }
     }
 
 	}
