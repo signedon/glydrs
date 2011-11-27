@@ -1,4 +1,4 @@
-var fastStart = true;//This will auto launch the game!
+var fastStart = false;//This will auto launch the game!
 
 
 var gamepads = [];
