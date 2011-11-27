@@ -1,9 +1,9 @@
 var obstacles = {
 	spawn: function(scene,physics,player) {
 		var position = player.getSceneObject().position.slice(0);
-		position[1] -= 10;
-    position[0] +=(Math.random()-.5)*10;
-    position[2] +=(Math.random()-.5)*10;
+		position[1] -= 1000;
+    position[0] +=(Math.random()-.5)*25;
+    position[2] +=(Math.random()-.5)*25;
 		var lastObstacleHeight = player.getSceneObject().getProperty('lastObstacleHeight');
 		if(typeof lastObstacleHeight == 'undefined'){
 			lastObstacleHeight = 0;
@@ -37,7 +37,7 @@ var obstacles = {
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:position,
-			scale:[5,2,5]
+			scale:[20,2,20]
 		});
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 

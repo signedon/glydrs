@@ -5,17 +5,17 @@ var tube = {
 				type: "torus",
 				innerRadius:.9,
 				outerRadius:1,
-				lon:5,
-				lat:5,
+				lon:10,
+				lat:10,
 				material: {
           textures: {
-            color: "/cubicvr/samples/images/6583-diffuse.jpg"
+            color: "/cubicvr/samples/images/2062-diffuse.jpg"
           }
         },
 				uvmapper: {
-					projectionMode: "planar",
-					projectionAxis: "y",
-					scale: [0.5, 0.5, 0.5]
+					projectionMode: "cylindrical",
+					projectionAxis: "x",
+					scale: [3, 3, .3]
 				}
 			},
 			compile: true
@@ -24,8 +24,7 @@ var tube = {
 		var tube = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:[0,-10,0],
-			scale:[20,9000,20]
-//			scale:[1,1,1]
+			scale:[30,1000000,30]
 		});
 		tube.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 

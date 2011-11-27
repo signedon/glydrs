@@ -10,7 +10,7 @@ var players = {
 			textures: {
 				color: "/cubicvr/samples/images/6583-diffuse.jpg"
 			},
-			opacity:.9
+			opacity:.5
 		});
 		var mesh = new CubicVR.Mesh({
 			primitive: {
@@ -24,10 +24,11 @@ var players = {
 			},
 			compile: true
 		});
+    var sizeModifier = 1;
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:location,
-			scale:[1.3,.5,1]
+			scale:[1.3*sizeModifier,.5*sizeModifier,1*sizeModifier]
 		});
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
@@ -57,29 +58,32 @@ var players = {
 	_applyPlayerForces:function(player,controls) {
 		var angularVelocity = player.getAngularVelocity();
     var velocity = player.getLinearVelocity();
-    var terminalVelocity = -8;
+    var terminalVelocity = -150;
     var maxVelocity = 20;
+    var rotationModifier = 2;
     if(angularVelocity[0] == 0 && angularVelocity[1] == 0 && angularVelocity[2] == 0){
-      if(controls.buttons.A_Button == 1){
-        terminalVelocity = -16;
-        maxVelocity = 7;
+      var modifier = 1.7;
+      if(controls.buttons.A_Button != 0){
+        rotationModifier = .5;
+        modifier = 5;
+        maxVelocity = 30;
+        terminalVelocity = -60;
       }
 
-      var modifier = 2;
       if (Math.abs(velocity[0]) < maxVelocity) {
         player.applyForce([controls.axes.Left_Stick_Y*modifier,0,0], [0,0,0]);
       }
       if (Math.abs(velocity[2]) < maxVelocity) {
         player.applyForce([0,0,controls.axes.Left_Stick_X*-1*modifier],[0,0,0]);
       }
-
+      
       //[forward/back, left/right,twist]
-      player.setRotationEuler([velocity[0]*-2+Math.random()*2,velocity[2]*2+Math.random()*2,Math.random()*2]);
+      player.setRotationEuler([velocity[0]*-2,velocity[2]*2,0]);
     }
     if(velocity[1] > terminalVelocity){
-      player.applyForce([0,-.2,0],[0,0,0]);
+      player.applyForce([0,-2,0],[0,0,0]);
     }else{
-      player.applyForce([0,.2,0],[0,0,0]);
+      player.applyForce([0,4,0],[0,0,0]);
     }
     
     if (Math.abs(velocity[0]) > 1) {

@@ -23,6 +23,7 @@ var glydrs = function(){
   physics.setGravity([0,0,0]);
   var scene = new CubicVR.Scene(canvas.width, canvas.height, 80);
   scene.camera.setTargeted(true);
+  scene.camera.setClip(.1,1000);
 
   // Add our camera to the window resize list
   CubicVR.addResizeable(scene);
@@ -40,7 +41,7 @@ var glydrs = function(){
     var seconds = timer.getSeconds();
     var roundedSecond = Math.floor(seconds)
     if(roundedSecond%1 == 0 && roundedSecond != obstacleSpawnTime){
-      obstacleSpawnTime = roundedSecond;
+    obstacleSpawnTime = roundedSecond;
     for(var i=0;i<playerArray.length;i++){
       obstacles.spawn(scene,physics,playerArray[i]);
     }
@@ -53,7 +54,7 @@ var glydrs = function(){
   for(var i=0;i<playerArray.length;i++){
     var playerPos = playerArray[i].getSceneObject().position.slice(0);
     scene.camera.target = playerPos;
-    scene.camera.position = [playerPos[0]+.2,playerPos[1]+5,playerPos[2]];
+    scene.camera.position = [playerPos[0]+.1,playerPos[1]+5,playerPos[2]];
     scene.camera.resize(canvas.width/playerArray.length, canvas.height);
     gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
     scene.render();
