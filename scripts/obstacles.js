@@ -1,5 +1,7 @@
 var obstacles = {
 	spawn: function(scene,physics,player) {
+    var tunnelRadius = 30;
+
 		var position = player.getSceneObject().position.slice(0);
 		position[1] -= 1000;
     position[0] +=(Math.random()-.5)*25;
@@ -9,6 +11,10 @@ var obstacles = {
 			lastObstacleHeight = 0;
 		}
 
+
+    var scale = [20,2,20];
+
+
 		if (Math.abs(lastObstacleHeight-position[1]) < 5) {
 			return;
 		} else {
@@ -17,11 +23,12 @@ var obstacles = {
 
 		var material = new CubicVR.Material({
 			textures: {
-				color: "/cubicvr/samples/images/6583-diffuse.jpg"
+				color: "resources/image.jpg"
 //        color:videoTexture
 			}
 		});
 
+    
 		var mesh = new CubicVR.Mesh({
 			primitive: {
 				type: "box",
@@ -29,7 +36,8 @@ var obstacles = {
 				material: material,
 				uvmapper: {
 					projectionMode: "cubic",
-					scale: [1, 1, 1]
+					scale: [(tunnelRadius*2)/scale[0]*1.25, scale[1], (tunnelRadius*2)/scale[2]],
+          center: [-1*(position[2]/scale[2]),0,(position[0]/scale[0])]
 				}
 			},
 			compile: true
@@ -37,9 +45,12 @@ var obstacles = {
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:position,
-			scale:[20,2,20]
+			scale:scale,
+      rotation:[0,-90,0]
 		});
-		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
+
+
+//		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
 
 		box.addEvent({
@@ -57,8 +68,8 @@ var obstacles = {
 			collision: {
 				type: CubicVR.enums.collision.shape.BOX,
 				size: box.scale
-			},
-			blocker:true
+			}
+//			blocker:true
 		});
 		physics.bind(rigidBox);
 	}

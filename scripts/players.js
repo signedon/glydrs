@@ -1,4 +1,3 @@
-var hasTicked = 0;
 var players = {
 	playerCount:0,
 	spawn:function(scene, physics,location,controls) {
@@ -24,7 +23,7 @@ var players = {
 			},
 			compile: true
 		});
-    var sizeModifier = 1;
+    var sizeModifier = 3;
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:location,
@@ -67,7 +66,7 @@ var players = {
         rotationModifier = .5;
         modifier = 5;
         maxVelocity = 30;
-        terminalVelocity = -60;
+        terminalVelocity = -100;
       }
 
       if (Math.abs(velocity[0]) < maxVelocity) {

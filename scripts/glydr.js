@@ -34,6 +34,7 @@ var glydrs = function(){
     playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
   }
 
+  
   var obstacleSpawnTime = -1;
   var playerPush = -1;
   // Start our main drawing loop, it provides a timer and the gl context as parameters
@@ -54,7 +55,7 @@ var glydrs = function(){
   for(var i=0;i<playerArray.length;i++){
     var playerPos = playerArray[i].getSceneObject().position.slice(0);
     scene.camera.target = playerPos;
-    scene.camera.position = [playerPos[0]+.1,playerPos[1]+5,playerPos[2]];
+    scene.camera.position = [playerPos[0]+.1,playerPos[1]+14,playerPos[2]];
     scene.camera.resize(canvas.width/playerArray.length, canvas.height);
     gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
     scene.render();
