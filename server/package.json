@@ -1,0 +1,12 @@
+{
+  "name": "YProxy",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.x",
+    "jade": ">= 0.0.1",
+    "request": "2.2.x",
+    "colors": "0.5.x",
+    "underscore": "1.2.x"
+  }
+}
