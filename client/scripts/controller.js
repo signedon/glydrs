@@ -1,15 +1,9 @@
 /*
-*
 * Left stick is up/down left/right for movement
 * A button (shift for left player, control for right player) is speed boost. Warning, you lose a lot of control with it.
-* 
-*
 * */
 
-
-
 var fastStart = false;//This will auto launch the game!
-
 
 var gamepads = [];
 var numKeyboards = 0;
@@ -32,9 +26,9 @@ jQuery(document).ready(function(){
   window.addEventListener("MozGamepadButtonUp", function(e) { buttonHandler(e, false); }, false);
 
   if(fastStart){
-	numKeyboards++;
-	getNewKeyboardControl();
-	updateControllerCount();
+    numKeyboards++;
+    getNewKeyboardControl();
+    updateControllerCount();
 	  startGame();
   }
   window.addEventListener('keyup', function(event) {
