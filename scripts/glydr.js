@@ -35,16 +35,27 @@ var glydrs = function(){
   }
 
   
+  var video = document.getElementById('gameVideo');
+  var videoTexture = new CubicVR.CanvasTexture(video);
+  video.addEventListener('canplay', function(e) {
+    video.play();
+  }, false);
+  video.addEventListener('ended', function(e) {
+    video.currentTime = 0;
+  }, false);
+
+  
   var obstacleSpawnTime = -1;
   var playerPush = -1;
   // Start our main drawing loop, it provides a timer and the gl context as parameters
   CubicVR.MainLoop(function(timer, gl) {
+    if (video.currentTime > 0) videoTexture.update();
     var seconds = timer.getSeconds();
     var roundedSecond = Math.floor(seconds)
     if(roundedSecond%1 == 0 && roundedSecond != obstacleSpawnTime){
     obstacleSpawnTime = roundedSecond;
     for(var i=0;i<playerArray.length;i++){
-      obstacles.spawn(scene,physics,playerArray[i]);
+      obstacles.spawn(scene,physics,playerArray[i],videoTexture);
     }
   }
 

@@ -1,5 +1,5 @@
 var obstacles = {
-	spawn: function(scene,physics,player) {
+	spawn: function(scene,physics,player,videoTexture) {
     var tunnelRadius = 30;
 
 		var position = player.getSceneObject().position.slice(0);
@@ -11,9 +11,7 @@ var obstacles = {
 			lastObstacleHeight = 0;
 		}
 
-
     var scale = [20,2,20];
-
 
 		if (Math.abs(lastObstacleHeight-position[1]) < 5) {
 			return;
@@ -21,10 +19,11 @@ var obstacles = {
 			player.getSceneObject().setProperty('lastObstacleHeight',position[1]);
 		}
 
+
 		var material = new CubicVR.Material({
 			textures: {
-				color: "resources/image.jpg"
-//        color:videoTexture
+//				color: "resources/image.jpg"
+        color:videoTexture
 			}
 		});
 
@@ -42,6 +41,8 @@ var obstacles = {
 			},
 			compile: true
 		});
+
+
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:position,
@@ -49,8 +50,41 @@ var obstacles = {
       rotation:[0,-90,0]
 		});
 
+  //BEGIN wireframes
+    var wireframeMesh = new CubicVR.Mesh({
+        primitives:{
+          type: "box",
+          size: 1.0,
+          material: {
+            textures: {
+                color: "resources/image3.jpg"
+            }
+          },
+          uvmapper: {
+            projectionMode: "cubic",
+            scale: [0.5, 0.5, 0.5]
+          }
+        },
+        wireframe: true,
+        triangulateWireframe: true,
+        wireframeMaterial: {
+            color: [0, 1, 0]
+        },
+        compile: true
+    });
+		var wireframeBox = new CubicVR.SceneObject({
+			mesh:wireframeMesh,
+			position:position,
+			scale:[scale[0]+.1,scale[1]-.5,scale[2]+.1],
+      rotation:[0,-90,0]
+		});
+		scene.bind(wireframeBox);
 
-//		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
+
+    
+
+
+		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
 
 		box.addEvent({
