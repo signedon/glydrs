@@ -7,6 +7,7 @@ var glydrs = function(){
   var playerArray = [];
   var inputControls = {};
   var canvas = CubicVR.getCanvas();
+  $('#gameVideo').hide();
   if (!gl) {
     alert("Sorry, no WebGL support.");
     return;
@@ -37,12 +38,12 @@ var glydrs = function(){
   
   var video = document.getElementById('gameVideo');
   var videoTexture = new CubicVR.CanvasTexture(video);
-  video.addEventListener('canplay', function(e) {
-    video.play();
-  }, false);
-  video.addEventListener('ended', function(e) {
-    video.currentTime = 0;
-  }, false);
+//  video.addEventListener('canplay', function(e) {
+//    video.play();
+//  }, false);
+//  video.addEventListener('ended', function(e) {
+//    video.currentTime = 0;
+//  }, false);
 
   
   var obstacleSpawnTime = -1;

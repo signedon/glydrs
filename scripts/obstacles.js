@@ -84,7 +84,7 @@ var obstacles = {
     
 
 
-		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
+//		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
 
 		box.addEvent({
