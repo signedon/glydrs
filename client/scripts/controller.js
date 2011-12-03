@@ -3,7 +3,7 @@
 * A button (shift for left player, control for right player) is speed boost. Warning, you lose a lot of control with it.
 * */
 
-var fastStart = true;//This will auto launch the game!
+var fastStart = false;//This will auto launch the game!
 
 var gamepads = [];
 var numKeyboards = 0;
@@ -167,6 +167,62 @@ jQuery(document).ready(function(){
     gamepads.push(keyboardControlObj);
     return keyboardControlObj
   }
+
+  var kinectData ;
+
+  DepthJS = {
+    onKinectInit: function() {
+      if(!kinectData){
+        console.log('start?')
+         kinectData = {
+          'axes' : {
+            'Left_Stick_X':0,
+            'Left_Stick_Y':0,
+            'Right_Stick_X':0,
+            'Right_Stick_Y':0
+          },
+          'buttons' : {
+            'A_Button':0,
+            'B_Button':0,
+            'X_Button':0,
+            'Y_Button':0,
+            'Left_Stick_Button':0,
+            'Right_Stick_Button':0,
+            'Start_Button':0,
+            'Back_Button':0,
+            'Home_Button':0,
+            'Pad_Up':0,
+            'Pad_Down':0,
+            'Pad_Left':0,
+            'Pad_Right':0,
+            'Left_Trigger_1':0,
+            'Right_Trigger_1':0,
+            'Left_Trigger_2':0,
+            'Right_Trigger_2':0
+          },
+        'keyboard':true
+        };
+        gamepads.push(kinectData);
+        updateControllerCount();
+      }else{
+        console.log('kinect started') 
+      }
+       
+  },
+    onMove: function(x, y, z) {
+
+      //update for percentage based data
+      kinectData['axes']['Left_Stick_X'] = ( x / 50 - 1);
+      kinectData['axes']['Left_Stick_Y'] = ( x / 50 - 1);
+
+      if( z < 50 ){
+        kinectData['buttons']['A_Button'] = 1;
+      }else{
+        kinectData['buttons']['Start_Button'] = 1;
+      }
+      console.log('onmove',kinectData);
+    }
+  };
 
   function startGame(){
     if(!gamePlaying){
