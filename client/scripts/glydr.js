@@ -9,21 +9,14 @@ var glydrs = function(){
   var canvas = CubicVR.getCanvas();
 
   var tunnelRadius = 50;
-  var tunnelLength = 20000;
-  var tunnelSides = 5;
+  var tunnelLength = 21000;
+  var tunnelSides = 8;
 
   $('#gameVideo').hide();
   if (!gl) {
     alert("Sorry, no WebGL support.");
     return;
   };
-
-//    var video = document.getElementById('video');
-//    videoTexture = new CubicVR.CanvasTexture(video);
-//
-//    video.addEventListener('canplay', function(e) {
-//      video.play();
-//    }, false);
 
   var physics = new CubicVR.ScenePhysics();
   physics.setGravity([0,0,0]);
@@ -43,13 +36,11 @@ var glydrs = function(){
   
   var video = document.getElementById('gameVideo');
   var videoTexture = new CubicVR.CanvasTexture(video);
-//  video.addEventListener('canplay', function(e) {
-//    video.play();
-//  }, false);
-//  video.addEventListener('ended', function(e) {
-//    video.currentTime = 0;
-//  }, false);
-
+  video.addEventListener('canplay', function(e) {
+    video.play();
+  }, false);
+  video.play();
+  
   obstacles.generateMap(scene,physics,tunnelRadius,tunnelLength,videoTexture);
 
   // Start our main drawing loop, it provides a timer and the gl context as parameters
