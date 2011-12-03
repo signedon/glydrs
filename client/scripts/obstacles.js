@@ -1,23 +1,27 @@
 var obstacles = {
-	spawn: function(scene,physics,player,videoTexture) {
-    var tunnelRadius = 30;
+  generateMap:function(scene,physics,tunnelRadius,tunnelLength,videoTexture){
+    for(var i=200;i<tunnelLength;i=i+60){
+      var location = [(Math.random()*tunnelRadius*2)-tunnelRadius,-i,(Math.random()*tunnelRadius*2)-tunnelRadius];
+      obstacles.spawn(scene,physics,videoTexture,location,tunnelRadius);
+    }
+  },
+	spawn: function(scene,physics,videoTexture,position,tunnelRadius) {
+//		var position = player.getSceneObject().position.slice(0);
+//		position[1] -= 1000;
+//    position[0] +=(Math.random()-.5)*25;
+//    position[2] +=(Math.random()-.5)*25;
+//		var lastObstacleHeight = player.getSceneObject().getProperty('lastObstacleHeight');
+//		if(typeof lastObstacleHeight == 'undefined'){
+//			lastObstacleHeight = 0;
+//		}
 
-		var position = player.getSceneObject().position.slice(0);
-		position[1] -= 1000;
-    position[0] +=(Math.random()-.5)*25;
-    position[2] +=(Math.random()-.5)*25;
-		var lastObstacleHeight = player.getSceneObject().getProperty('lastObstacleHeight');
-		if(typeof lastObstacleHeight == 'undefined'){
-			lastObstacleHeight = 0;
-		}
+    var scale = [35,15,35];
 
-    var scale = [20,2,20];
-
-		if (Math.abs(lastObstacleHeight-position[1]) < 5) {
-			return;
-		} else {
-			player.getSceneObject().setProperty('lastObstacleHeight',position[1]);
-		}
+//		if (Math.abs(lastObstacleHeight-position[1]) < 5) {
+//			return;
+//		} else {
+//			player.getSceneObject().setProperty('lastObstacleHeight',position[1]);
+//		}
 
 
 		var material = new CubicVR.Material({
@@ -51,34 +55,34 @@ var obstacles = {
 		});
 
   //BEGIN wireframes
-    var wireframeMesh = new CubicVR.Mesh({
-        primitives:{
-          type: "box",
-          size: 1.0,
-          material: {
-            textures: {
-                color: "resources/image3.jpg"
-            }
-          },
-          uvmapper: {
-            projectionMode: "cubic",
-            scale: [0.5, 0.5, 0.5]
-          }
-        },
-        wireframe: true,
-        triangulateWireframe: true,
-        wireframeMaterial: {
-            color: [0, 1, 0]
-        },
-        compile: true
-    });
-		var wireframeBox = new CubicVR.SceneObject({
-			mesh:wireframeMesh,
-			position:position,
-			scale:[scale[0]+.1,scale[1]-.5,scale[2]+.1],
-      rotation:[0,-90,0]
-		});
-		scene.bind(wireframeBox);
+//    var wireframeMesh = new CubicVR.Mesh({
+//        primitives:{
+//          type: "box",
+//          size: 1.0,
+//          material: {
+//            textures: {
+//                color: "resources/image3.jpg"
+//            }
+//          },
+//          uvmapper: {
+//            projectionMode: "cubic",
+//            scale: [0.5, 0.5, 0.5]
+//          }
+//        },
+//        wireframe: true,
+//        triangulateWireframe: true,
+//        wireframeMaterial: {
+//            color: [0, 1, 0]
+//        },
+//        compile: true
+//    });
+//		var wireframeBox = new CubicVR.SceneObject({
+//			mesh:wireframeMesh,
+//			position:position,
+//			scale:[scale[0]+.1,scale[1]-.5,scale[2]+.1],
+//      rotation:[0,-90,0]
+//		});
+//		scene.bind(wireframeBox);
 
 
     
@@ -90,8 +94,7 @@ var obstacles = {
 		box.addEvent({
 			id: CubicVR.enums.event.CONTACT_GHOST,
 			action: function(event,handler){
-//				event.event_properties.contacts[0].sceneObject.position = [0,0,0];
-//				console.log(event,handler);
+//        players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
 
@@ -103,7 +106,7 @@ var obstacles = {
 				type: CubicVR.enums.collision.shape.BOX,
 				size: box.scale
 			},
-			blocker:true
+//			blocker:true
 		});
 		physics.bind(rigidBox);
 	}

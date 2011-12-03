@@ -1,9 +1,6 @@
 var tube = {
-  create:function(scene,physics){
-    var sides = 9;
-    var radius = 50;
-    var length = 100000;
-
+  create:function(scene,physics,radius,length,sides){
+    length = length*2;
     var largeTunnel = new CubicVR.Mesh();
     var tubeCollision = new CubicVR.CollisionMap();
     

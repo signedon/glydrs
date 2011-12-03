@@ -1,5 +1,8 @@
 var players = {
 	playerCount:0,
+  killPlayer:function(player){
+    player.reset();
+  },
 	spawn:function(scene, physics,location,controls) {
 		this.playerCount++;
 		if(!location){
@@ -7,7 +10,7 @@ var players = {
 		}
 		var material = new CubicVR.Material({
 			textures: {
-				color: "/cubicvr/samples/images/6583-diffuse.jpg"
+				color: "/cubicvr/samples/images/2062-diffuse.jpg"
 			},
 			opacity:.5
 		});
@@ -75,7 +78,6 @@ var players = {
       if (Math.abs(velocity[2]) < maxVelocity) {
         player.applyForce([0,0,controls.axes.Left_Stick_X*-1*modifier],[0,0,0]);
       }
-      
       //[forward/back, left/right,twist]
       player.setRotationEuler([velocity[0]*-2,velocity[2]*2,0]);
     }

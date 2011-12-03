@@ -7,6 +7,11 @@ var glydrs = function(){
   var playerArray = [];
   var inputControls = {};
   var canvas = CubicVR.getCanvas();
+
+  var tunnelRadius = 50;
+  var tunnelLength = 20000;
+  var tunnelSides = 5;
+
   $('#gameVideo').hide();
   if (!gl) {
     alert("Sorry, no WebGL support.");
@@ -29,7 +34,7 @@ var glydrs = function(){
   // Add our camera to the window resize list
   CubicVR.addResizeable(scene);
 
-  tube.create(scene,physics);
+  tube.create(scene,physics,tunnelRadius,tunnelLength,tunnelSides);
 
   for(i=0;i<gamepads.length;i++){
     playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
@@ -45,32 +50,24 @@ var glydrs = function(){
 //    video.currentTime = 0;
 //  }, false);
 
-  
-  var obstacleSpawnTime = -1;
-  var playerPush = -1;
+  obstacles.generateMap(scene,physics,tunnelRadius,tunnelLength,videoTexture);
+
   // Start our main drawing loop, it provides a timer and the gl context as parameters
   CubicVR.MainLoop(function(timer, gl) {
     if (video.currentTime > 0) videoTexture.update();
     var seconds = timer.getSeconds();
-    var roundedSecond = Math.floor(seconds)
-    if(roundedSecond%1 == 0 && roundedSecond != obstacleSpawnTime){
-    obstacleSpawnTime = roundedSecond;
+
+    physics.stepSimulation(timer.getLastUpdateSeconds());
+    physics.triggerEvents();
+    scene.runEvents(seconds);
+
     for(var i=0;i<playerArray.length;i++){
-      obstacles.spawn(scene,physics,playerArray[i],videoTexture);
+      var playerPos = playerArray[i].getSceneObject().position.slice(0);
+      scene.camera.target = playerPos;
+      scene.camera.position = [playerPos[0]+.1,playerPos[1]+14,playerPos[2]];
+      scene.camera.resize(canvas.width/playerArray.length, canvas.height);
+      gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
+      scene.render();
     }
-  }
-
-  physics.stepSimulation(timer.getLastUpdateSeconds());
-  physics.triggerEvents();
-  scene.runEvents(seconds);
-
-  for(var i=0;i<playerArray.length;i++){
-    var playerPos = playerArray[i].getSceneObject().position.slice(0);
-    scene.camera.target = playerPos;
-    scene.camera.position = [playerPos[0]+.1,playerPos[1]+14,playerPos[2]];
-    scene.camera.resize(canvas.width/playerArray.length, canvas.height);
-    gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
-    scene.render();
-  }
   });
 }

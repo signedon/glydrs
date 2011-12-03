@@ -55,6 +55,7 @@ app.get('/video/:vid', function(req, res){
 
   console.log('Requesting video ID'.bold.green, videoId.bold.green);
   request.get('http://youtube.com/get_video_info?&video_id=' + videoId + '&el=detailpage&ps=default&eurl=&gl=US&hl=en', function (error, response, body) {
+    console.log('Response'.orange);
     parsed = qs.parse(body);
 
     var videos = decodeURIComponent(parsed.url_encoded_fmt_stream_map).split(','),
