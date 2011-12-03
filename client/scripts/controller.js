@@ -3,7 +3,7 @@
 * A button (shift for left player, control for right player) is speed boost. Warning, you lose a lot of control with it.
 * */
 
-var fastStart = true;//This will auto launch the game!
+var fastStart = false;//This will auto launch the game!
 
 var gamepads = [];
 var numKeyboards = 0;
