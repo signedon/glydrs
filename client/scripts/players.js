@@ -10,7 +10,7 @@ var players = {
 		}
 		var material = new CubicVR.Material({
 			textures: {
-				color: "/cubicvr/samples/images/2062-diffuse.jpg"
+				color: "resources/2062-diffuse.jpg"
 			},
 			opacity:.5
 		});
