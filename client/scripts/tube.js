@@ -1,22 +1,15 @@
 var tube = {
   create:function(scene,physics){
-    var sides = 8;
-    var radius = 25;
+    var sides = 9;
+    var radius = 50;
     var length = 100000;
 
     var largeTunnel = new CubicVR.Mesh();
     var tubeCollision = new CubicVR.CollisionMap();
-
+    
     var newDistance =  Math.tan((360/sides/2) * (Math.PI/180))*2;
 
     for(var i=0;i<sides;i++){
-      //Figure out where to place the object on the wall
-//      var x = Math.round(radius*Math.cos(360*(i/sides)*(Math.PI/180)));
-//	    var y = Math.round(radius*Math.sin(360*(i/sides)*(Math.PI/180)));
-//      console.log(x,y);
-//      var translate =[(x/radius+1)/2,0,(y/radius+1)/2];
-
-
       var transform = new CubicVR.Transform();
       //Position the item to the right side.
       transform.translate([0,0,1]);
@@ -40,14 +33,18 @@ var tube = {
 				},
         mesh: largeTunnel
       });
+      //Figure out where to place the object on the wall
+      var rotationOffest = 90;
+      var x = Math.round(radius*Math.cos((360*(i/sides)+rotationOffest)*(Math.PI/180)));
+      var y = Math.round(radius*Math.sin((360*(i/sides)+rotationOffest)*(Math.PI/180)));
 
-      //Add collision
       tubeCollision.addShape({
-          type: CubicVR.enums.collision.shape.BOX,
-          size: [newDistance,1,1],
-          position: [0,-10,radius],
-          rotation:[0,360*i/sides,0]
+        type: CubicVR.enums.collision.shape.BOX,
+        position: [x,0,y],
+        size: [newDistance*radius,length,1],
+        rotation:[0,-360*((i)/sides),0]
       });
+
     }
 
     //Prepare the entire tunnel
@@ -70,6 +67,5 @@ var tube = {
     //Bind them to the scene
     scene.bind(tubeWall);
     physics.bind(rigidTubeWall);
-    return rigidTubeWall;
   }
 }

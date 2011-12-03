@@ -102,8 +102,8 @@ var obstacles = {
 			collision: {
 				type: CubicVR.enums.collision.shape.BOX,
 				size: box.scale
-			}
-//			blocker:true
+			},
+			blocker:true
 		});
 		physics.bind(rigidBox);
 	}
