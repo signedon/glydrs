@@ -95,7 +95,7 @@ var obstacles = {
 		box.addEvent({
 			id: CubicVR.enums.event.CONTACT_GHOST,
 			action: function(event,handler){
-//        players.killPlayer(event.event_properties.contacts[0]);
+        players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
 
@@ -106,8 +106,8 @@ var obstacles = {
 			collision: {
 				type: CubicVR.enums.collision.shape.BOX,
 				size: box.scale
-			}
-//			blocker:true
+			},
+			blocker:true
 		});
 		physics.bind(rigidBox);
 	}

@@ -1,5 +1,5 @@
 var tube = {
-  create:function(scene,physics,radius,length,sides){
+  create:function(scene,physics,radius,length,sides,texture){
     length = length*2;
     var largeTunnel = new CubicVR.Mesh();
     var tubeCollision = new CubicVR.CollisionMap();
@@ -19,7 +19,8 @@ var tube = {
       CubicVR.primitives.plane({
 				material: {
           textures: {
-            color: "resources/2062-diffuse.jpg"
+//            color: "resources/2062-diffuse.jpg"
+            color:texture
           }
         },
         transform: transform,
