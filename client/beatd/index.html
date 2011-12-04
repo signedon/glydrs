@@ -1,0 +1,180 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <style>
+    #beats{
+      border: 1px solid #000;
+      clear: both;
+      float: left;
+      position: relative;
+      /*left:0;
+      position: absolute;
+      top:0;
+      z-index: 10;*/
+    }
+    #goldfish{
+      float: left;
+      position: relative;
+      margin: 0 0 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <div role="main">
+    <video src="WeComeTogether.webm" id="goldfish" controls></video>
+    <canvas id="beats" width="1200" height="250"></canvas>
+  </div>
+  <footer>
+
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script src="beatdetektor.js"></script>
+  <script src="fft.js"></script>
+  <script>
+
+    var channels          = 0
+      , rate              = 0
+      , frameBufferLength = 0
+      , bufferSize        = 0
+      , m_BeatTimer       = 0
+      , m_BeatCounter     = 0
+      , ftimer            = 0
+      , clearClr          = [0,0,1]
+      , signal            = new Float32Array(bufferSize)
+      , fft               = null
+      , video             = document.getElementById('goldfish')
+      , canvas            = document.getElementById('beats')
+      , ctx               = canvas.getContext('2d')
+      , colors            = ["red", "orange", "yellow", "green", "blue", "cyan", "purple"]
+      , colorIndex        = 0
+      , beatd
+      , kick_det
+      , vu
+      ;
+
+    function processVideoData(){
+
+      channels          = video.mozChannels;
+      rate              = video.mozSampleRate;
+      frameBufferLength = video.mozFrameBufferLength;
+      bufferSize        = frameBufferLength/channels;
+      fft               = new FFT(bufferSize,rate);
+      signal            = new Float32Array(bufferSize);
+
+      console.log(channels,rate,frameBufferLength,bufferSize,signal);
+      console.log(fft)
+      console.log(beatd)
+
+      video.addEventListener('MozAudioAvailable',audioAvalible,false);
+
+    };
+
+
+    function audioAvalible(event){
+      var fb = event.frameBuffer;
+      
+      for( var i = 0, fbl = bufferSize; i < fbl; i++ ){
+        signal[i] = ( fb[2*i] + fb[2*i*1] ) / 2;
+      } 
+
+      fft.forward(signal); 
+
+      timestamp = event.time;
+
+      beatd.process( timestamp, fft.spectrum );
+
+      if(beatd.win_bpm_int_lo){
+        m_BeatTimer += beatd.last_update;
+
+        if(m_BeatTimer > (60.0/beatd.win_bpm_int_lo)){
+          m_BeatTimer -= (60.0/beatd.win_bpm_int_lo);
+          clearClr[0] = 0.5+Math.random()/2;
+          clearClr[1] = 0.5+Math.random()/2;
+          clearClr[2] = 0.5+Math.random()/2;
+          m_BeatCounter++;
+        }
+
+      }
+
+      ftimer += beatd.last_update;
+
+      if (ftimer > 1.0/30.0){
+        vu.process(beatd,ftimer);
+      }
+      
+      draw();
+
+    };
+
+    function draw(){
+      var newColor = colorIndex++;
+
+      if(colorIndex >= colors.length){
+        colorIndex = 0;
+      }
+
+      var height = (m_BeatTimer / (60.0/beatd.win_bpm_int_lo)) * 100;
+      canvas.width = canvas.width;
+      ctx.fillStyle = colors[newColor];
+      //ctx.fillStyle = 'blue';
+      //console.log('new',height);
+      //console.log(vu.vu_levels);
+      //console.log(vu.getLevel(1));
+      //console.log(beatd.last_update * 100);
+      //console.log('0',vu.vu_levels[0]);
+      //console.log('3',vu.vu_levels[3]);
+      //console.log(vu.vu_levels[0]*100)
+
+      var vuLength = vu.vu_levels.length;
+
+      for(var i = 0; i < vuLength; i++){
+        if(vu.vu_levels[i] != 0){
+          //console.log(vu.vu_levels[i] * 100);
+          ctx.fillRect((i * 10),0,2,(vu.vu_levels[i]*100) )
+        }
+      }
+    };
+
+    function start(){
+      beatd = new BeatDetektor();    
+      vu = new BeatDetektor.modules.vis.VU();
+
+      video.addEventListener('loadedmetadata', processVideoData, false);
+      video.play();
+      //canvas.width = window.outerWidth;
+      //canvas.height = window.outerHeight;
+
+      $(window).click(function(){
+        //video.play();
+      })
+
+    };
+
+    $(function(){
+      start();
+    });
+
+  </script>
+</body>
+</html>
