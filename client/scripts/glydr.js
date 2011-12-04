@@ -7,10 +7,11 @@ var glydrs = function(){
   var playerArray = [];
   var inputControls = {};
   var canvas = CubicVR.getCanvas();
+  $(canvas).addClass('active');
 
   var tunnelRadius = 50;
   var tunnelLength = 23000;//Tuned for a 4 minute video
-  var tunnelSides = 8;
+  var tunnelSides =6;
 
   var highScores = [];
 
@@ -33,28 +34,31 @@ var glydrs = function(){
   for(var i=0;i<gamepads.length;i++){
     highScores.push(0);
     playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
-    $('body').append('<div class="playerScore player'+i+'">0</div>');
-    $('.player'+i).css({
-      'left': window.width/gamepads.length*i
-    });
+    $('body').append('<div class="playerScore player'+i+'" style="left:'+canvas.width/gamepads.length*i+'px">0</div>');
   }
 
   
   var video = document.getElementById('gameVideo');
   var videoTexture = new CubicVR.CanvasTexture(video);
   video.play();
-  video.muted = true;
+//  video.muted = true;
 
 
   tube.create(scene,physics,tunnelRadius,tunnelLength,tunnelSides,videoTexture);
 
   obstacles.generateMap(scene,physics,tunnelRadius,tunnelLength,videoTexture);
+  var lastChange = 0;
   // Start our main drawing loop, it provides a timer and the gl context as parameters
   CubicVR.MainLoop(function(timer, gl) {
     if (video.currentTime > 0) videoTexture.update();
     physics.stepSimulation(timer.getLastUpdateSeconds());
     physics.triggerEvents();
     scene.runEvents(timer.getSeconds());
+
+    if(Math.round(timer.getSeconds())%1 == 0 && lastChange !=Math.round(timer.getSeconds())){
+      lastChange = Math.round(timer.getSeconds());
+      tube.changeColor();
+    }
 
     for(var i=0;i<playerArray.length;i++){
       var playerPos = playerArray[i].getSceneObject().position.slice(0);

@@ -54,28 +54,32 @@ app.get('/video/:vid', function(req, res){
   }
 
   console.log('Requesting video ID'.bold.green, videoId.bold.green);
-  request.get('http://youtube.com/get_video_info?&video_id=' + videoId + '&el=detailpage&ps=default&eurl=&gl=US&hl=en', function (error, response, body) {
-    console.log('Response'.orange);
-    parsed = qs.parse(body);
+  try{
+    request.get('http://youtube.com/get_video_info?&video_id=' + videoId + '&el=detailpage&ps=default&eurl=&gl=US&hl=en', function (error, response, body) {
+      console.log('Response'.orange);
+      parsed = qs.parse(body);
 
-    var videos = decodeURIComponent(parsed.url_encoded_fmt_stream_map).split(','),
-        videosLength,
-        video = videos[0];
+      var videos = decodeURIComponent(parsed.url_encoded_fmt_stream_map).split(','),
+          videosLength,
+          video = videos[0];
 
-    videos = _.filter(videos, function(item){
-      return item.indexOf('url=') === 0;
+      videos = _.filter(videos, function(item){
+        return item.indexOf('url=') === 0;
+      });
+
+      console.log('Found streams:'.bold.grey, videos.length.toString().grey);
+
+      video = video.slice(4);
+      video = video.slice(0, video.indexOf('&quality'));
+
+      console.log('Requesting stream'.bold.grey, video.grey);
+
+      request.get(video).pipe(res);
+      //req.pipe(request(video)).pipe(res);
     });
-
-    console.log('Found streams:'.bold.grey, videos.length.toString().grey);
-
-    video = video.slice(4);
-    video = video.slice(0, video.indexOf('&quality'));
-
-    console.log('Requesting stream'.bold.grey, video.grey);
-
-    request.get(video).pipe(res);
-    //req.pipe(request(video)).pipe(res);
-  });
+  }catch(e){
+    console.log('Error requesting stream'.bold.red);
+  }
 });
 
 

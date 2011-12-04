@@ -1,4 +1,5 @@
 var tube = {
+  tubeWall:null,
   create:function(scene,physics,radius,length,sides,texture){
     length = length*2;
     var largeTunnel = new CubicVR.Mesh();
@@ -26,7 +27,7 @@ var tube = {
         transform: transform,
 				uvmapper: {
 					projectionMode: "planar",
-					projectionAxis: "x",
+					projectionAxis: "y",
           scale:[2/newDistance,30/length,2/newDistance]
 				},
         mesh: largeTunnel
@@ -54,6 +55,8 @@ var tube = {
       position:[0,-10,0],
       scale:[radius,length,radius]
     });
+    this.tubeWall = tubeWall;
+    this.changeColor();
 
     //Add physics
     var rigidTubeWall = new CubicVR.RigidBody(tubeWall, {
@@ -65,5 +68,11 @@ var tube = {
     //Bind them to the scene
     scene.bind(tubeWall);
     physics.bind(rigidTubeWall);
+  },
+  changeColor:function(){
+    var color = [Math.random(),Math.random(),Math.random()];
+    for(var i=0;i<this.tubeWall.getInstanceMaterials().length;i++){
+      this.tubeWall.getInstanceMaterials()[i].color = color;
+    }
   }
 }
