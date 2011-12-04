@@ -30,10 +30,13 @@ var glydrs = function(){
   CubicVR.addResizeable(scene);
 
 
-  for(i=0;i<gamepads.length;i++){
+  for(var i=0;i<gamepads.length;i++){
     highScores.push(0);
     playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
-   $('body').append('<div class="playerScore player'+i+'">0</div> ');
+    $('body').append('<div class="playerScore player'+i+'">0</div>');
+    $('.player'+i).css({
+      'left': window.width/gamepads.length*i
+    });
   }
 
   
@@ -62,8 +65,6 @@ var glydrs = function(){
         $('.player'+i).html(Math.round(highScores[i]/-10));
       }
 
-
-
       scene.camera.setFOV(fov);
       scene.camera.target = playerPos;
       scene.camera.position = [playerPos[0]+.1,playerPos[1]+12,playerPos[2]];
@@ -71,8 +72,6 @@ var glydrs = function(){
       gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
 
       scene.render();
-      
-      
     }
   });
 }
