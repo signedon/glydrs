@@ -55,6 +55,7 @@ var players = {
 
 		scene.bind(box);
 		physics.bind(rigidBox);
+    rigidBox.applyForce([0,-15,0],[0,0,0]);
 		return rigidBox;
 	},
 	_applyPlayerForces:function(player,controls) {
@@ -68,7 +69,7 @@ var players = {
       rotationModifier = .5;
       modifier = 10;
       maxVelocity = 30;
-      terminalVelocity = -100;
+      terminalVelocity = -120;
     }
 
     if (Math.abs(velocity[0]) < maxVelocity) {
@@ -80,13 +81,16 @@ var players = {
     //[forward/back, left/right,twist]
 
     player.setRotationEuler([velocity[0]*-2,velocity[2]*2,0]);
-    
-    if(velocity[1] > terminalVelocity){
-      player.applyForce([0,-2,0],[0,0,0]);
-    }else{
-      player.applyForce([0,4,0],[0,0,0]);
+
+    if(Math.abs(Math.abs(velocity[1]) + terminalVelocity) > 4){
+      if(velocity[1] > terminalVelocity){
+        player.applyForce([0,-2,0],[0,0,0]);
+      }else{
+        player.applyForce([0,4,0],[0,0,0]);
+      }
     }
-    
+
+
     if (Math.abs(velocity[0]) > 1) {
       if (velocity[0] > 0) {
         player.applyForce([-2,0,0], [0,0,0]);

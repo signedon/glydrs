@@ -9,7 +9,7 @@ var glydrs = function(){
   var canvas = CubicVR.getCanvas();
 
   var tunnelRadius = 50;
-  var tunnelLength = 21000;
+  var tunnelLength = 23000;//Tuned for a 4 minute video
   var tunnelSides = 8;
 
   $('#gameVideo').hide();
@@ -54,7 +54,7 @@ var glydrs = function(){
 
     for(var i=0;i<playerArray.length;i++){
       var playerPos = playerArray[i].getSceneObject().position.slice(0);
-      var fov = 90 - Math.floor(( Math.round(playerArray[i].getLinearVelocity()[1])/30)*5);
+      var fov = 90 - Math.floor(( playerArray[i].getLinearVelocity()[1]/30)*5);
       scene.camera.setFOV(fov);
       scene.camera.target = playerPos;
       scene.camera.position = [playerPos[0]+.1,playerPos[1]+12,playerPos[2]];
