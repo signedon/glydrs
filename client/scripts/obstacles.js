@@ -1,8 +1,9 @@
 var obstacles = {
   generateMap:function(scene,physics,tunnelRadius,tunnelLength,videoTexture){
     for(var i=200;i<tunnelLength;i=i+60){
-      var location = [(Math.random()*tunnelRadius*2)-tunnelRadius,-i,(Math.random()*tunnelRadius*2)-tunnelRadius];
-      obstacles.spawn(scene,physics,videoTexture,location,tunnelRadius);
+      var myTunnelRadius = tunnelRadius-15;
+      var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i,(Math.random()*myTunnelRadius*2)-myTunnelRadius];
+      obstacles.spawn(scene,physics,videoTexture,location,myTunnelRadius);
     }
   },
 	spawn: function(scene,physics,videoTexture,position,tunnelRadius) {
@@ -94,7 +95,7 @@ var obstacles = {
 		box.addEvent({
 			id: CubicVR.enums.event.CONTACT_GHOST,
 			action: function(event,handler){
-        players.killPlayer(event.event_properties.contacts[0]);
+//        players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
 
@@ -105,8 +106,8 @@ var obstacles = {
 			collision: {
 				type: CubicVR.enums.collision.shape.BOX,
 				size: box.scale
-			},
-			blocker:true
+			}
+//			blocker:true
 		});
 		physics.bind(rigidBox);
 	}
