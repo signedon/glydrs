@@ -7,7 +7,6 @@ jQuery(document).ready(function(){
   var video = document.getElementById('gameVideo');
   video.addEventListener("canplaythrough", function(){
     jQuery(video).data('canPlay',true);
-    console.log('Can play video!');
   }, true);
 
 });
