@@ -55,11 +55,7 @@ var glydrs = function(){
     alert('Game Over');
   }, false);
   var videoPlaying = false;
-  beat.init(video);
-
 //  video.muted = true;
-
-
   tube.create(scene,physics,tunnelRadius,tunnelLength,tunnelSides,videoTexture);
 
   obstacles.generateMap(scene,physics,tunnelRadius,tunnelLength,videoTexture);
@@ -72,9 +68,9 @@ var glydrs = function(){
       physics.triggerEvents();
       scene.runEvents(timer.getSeconds());
 
-      var tenthsOfSecond = Math.round(timer.getSeconds()*10);
-      if(lastChange != tenthsOfSecond && beat.isBeat()){
-        lastChange = tenthsOfSecond;
+      var partOfSecond = Math.round(timer.getSeconds()*2);
+      if(lastChange != partOfSecond && beat.isBeat()){
+        lastChange = partOfSecond;
         tube.changeColor();
       }
 
@@ -97,6 +93,7 @@ var glydrs = function(){
       }
     }else if(!gameStarted){
       if($(video).data('canPlay')){
+        beat.init(video);
         video.play();
         gameStarted = true;
         videoPlaying = true;

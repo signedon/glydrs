@@ -3,6 +3,6 @@ var beat = {
 
   },
   isBeat:function(){
-    return false;
+    return true;
   }
 }
