@@ -91,7 +91,7 @@ var glydrs = function(){
       }
     }else if(!gameStarted){
       if($(video).data('canPlay')){
-        if(jQuery.browser == 'mozilla'){
+        if(jQuery.browser.mozilla){
           beat.init(video);
         }else{
           console.log('Not in mozilla, beat detection turned off.');
