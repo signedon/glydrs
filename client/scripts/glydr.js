@@ -70,7 +70,7 @@ var glydrs = function(){
 
       var partOfSecond = Math.round(timer.getSeconds()*2);
       if(lastChange != partOfSecond && beat.isBeat()){
-        lastChange = partOfSecond;
+//        lastChange = partOfSecond;
         tube.changeColor();
       }
 

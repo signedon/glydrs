@@ -19,8 +19,8 @@ var tube = {
       CubicVR.primitives.plane({
 				material: {
           textures: {
-            color: "resources/2062-diffuse.jpg"
-//            color:texture
+//            color: "resources/2062-diffuse.jpg"
+            color:texture
           }
         },
         transform: transform,
