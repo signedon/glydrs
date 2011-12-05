@@ -55,6 +55,7 @@ var glydrs = function(){
     alert('Game Over');
   }, false);
   var videoPlaying = false;
+  beat.init(video);
 
 //  video.muted = true;
 
@@ -71,8 +72,9 @@ var glydrs = function(){
       physics.triggerEvents();
       scene.runEvents(timer.getSeconds());
 
-      if(Math.round(timer.getSeconds())%1 == 0 && lastChange !=Math.round(timer.getSeconds())){
-        lastChange = Math.round(timer.getSeconds());
+      var tenthsOfSecond = Math.round(timer.getSeconds()*10);
+      if(lastChange != tenthsOfSecond && beat.isBeat()){
+        lastChange = tenthsOfSecond;
         tube.changeColor();
       }
 
