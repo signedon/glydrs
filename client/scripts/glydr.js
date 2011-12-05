@@ -49,7 +49,6 @@ var glydrs = function(){
   var videoTexture = new CubicVR.CanvasTexture(video);
   var gameStarted = false;
   video.addEventListener("ended", function(){
-    console.log('Video ended');
     videoPlaying = false;
     alert('Game Over');
   }, false);
@@ -92,7 +91,11 @@ var glydrs = function(){
       }
     }else if(!gameStarted){
       if($(video).data('canPlay')){
-        beat.init(video);
+        if(jQuery.browser == 'mozilla'){
+          beat.init(video);
+        }else{
+          console.log('Not in mozilla, beat detection turned off.');
+        }
         video.play();
         gameStarted = true;
         videoPlaying = true;

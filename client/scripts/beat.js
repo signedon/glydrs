@@ -1,5 +1,5 @@
 var beat = {
-	kick_det: '',
+	kick_det: null,
   init:function(video){
   	var channels          = 0
       , rate              = 0
@@ -65,6 +65,10 @@ var beat = {
     };
   },
   isBeat:function(){
-    return this.kick_det.is_kick;
+    if(this.kick_det){
+      return this.kick_det.is_kick;
+    }else{
+      return false;
+    }
   }
 }
