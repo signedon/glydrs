@@ -1,8 +1,8 @@
 var obstacles = {
   generateMap:function(scene,physics,tunnelRadius,tunnelLength,videoTexture){
-    for(var i=200;i<tunnelLength;i=i+60){
-      var myTunnelRadius = tunnelRadius-15;
-      var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i,(Math.random()*myTunnelRadius*2)-myTunnelRadius];
+    for(var i=200;i<tunnelLength;i=i+50){
+      var myTunnelRadius = tunnelRadius-10;
+      var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i+(Math.random()*20-20),(Math.random()*myTunnelRadius*2)-myTunnelRadius];
       obstacles.spawn(scene,physics,videoTexture,location,myTunnelRadius);
     }
   },

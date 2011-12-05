@@ -3,7 +3,12 @@
 <head>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
   <script>
-      jQuery = jQuery.noConflict();
+    jQuery = jQuery.noConflict();
+    if(!console || !console.log){
+      console={
+        log:function(){}
+      }
+    }
   </script>
   <!--Libraries-->
   <script type="text/javascript" src="scripts/cubicvr/CubicVR.min.js"></script>
@@ -43,6 +48,9 @@
     <br><br>
     A button or Shift for left player and control for right player. == Slow down, and gain control.
     <br><br>
+    Keyboard Player 1: WASD<br>
+    Keyboard Player 2: Arrow Keys
+    <br><br>
     <label for="videoID">Youtube Video ID (HTML5 Only)</label>
     <input type="text" id="videoID" onchange="jQuery('#gameVideo').attr('src','/video/'+jQuery('#videoID').val())">
   </div>
@@ -55,6 +63,7 @@
   <!--<video id='gameVideo' src="/video/oHg5SJYRHA0"></video>-->
 
   <!--We Come Together - Goldfish-->
-  <video id='gameVideo' src="/resources/WeComeTogether.webm" ></video>
+  <video id='gameVideo' src="/resources/WeComeTogether.webm" preload="auto" width="480" height="360" ></video>
+
 </body>
 </html>

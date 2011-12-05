@@ -1,7 +1,6 @@
 var tube = {
   tubeWall:null,
   create:function(scene,physics,radius,length,sides,texture){
-    length = length*2;
     var largeTunnel = new CubicVR.Mesh();
     var tubeCollision = new CubicVR.CollisionMap();
     
@@ -20,15 +19,15 @@ var tube = {
       CubicVR.primitives.plane({
 				material: {
           textures: {
-//            color: "resources/2062-diffuse.jpg"
-            color:texture
+            color: "resources/2062-diffuse.jpg"
+//            color:texture
           }
         },
         transform: transform,
 				uvmapper: {
 					projectionMode: "planar",
-					projectionAxis: "y",
-          scale:[2/newDistance,30/length,2/newDistance]
+					projectionAxis: "z",
+          scale:[2/newDistance,50/length,2/newDistance]
 				},
         mesh: largeTunnel
       });
@@ -52,7 +51,7 @@ var tube = {
     //Create the tunnel
     var tubeWall = new CubicVR.SceneObject({
       mesh:largeTunnel,
-      position:[0,-10,0],
+      position:[0,length/-2,0],
       scale:[radius,length,radius]
     });
     this.tubeWall = tubeWall;

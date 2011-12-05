@@ -1,6 +1,15 @@
 var gl;
+var highScores = [];
 jQuery(document).ready(function(){
   gl = CubicVR.init();
+
+
+  var video = document.getElementById('gameVideo');
+  video.addEventListener("canplaythrough", function(){
+    jQuery(video).data('canPlay',true);
+    console.log('Can play video!');
+  }, true);
+
 });
 var glydrs = function(){
   var $ = jQuery;
@@ -10,10 +19,9 @@ var glydrs = function(){
   $(canvas).addClass('active');
 
   var tunnelRadius = 50;
-  var tunnelLength = 23000;//Tuned for a 4 minute video
-  var tunnelSides =6;
+  var tunnelLength = 23700;//Tuned for a 4 minute video
+  var tunnelSides = 6;
 
-  var highScores = [];
 
   $('#gameVideo').hide();
   if (!gl) {
@@ -40,7 +48,14 @@ var glydrs = function(){
   
   var video = document.getElementById('gameVideo');
   var videoTexture = new CubicVR.CanvasTexture(video);
-  video.play();
+  var gameStarted = false;
+  video.addEventListener("ended", function(){
+    console.log('Video ended');
+    videoPlaying = false;
+    alert('Game Over');
+  }, false);
+  var videoPlaying = false;
+
 //  video.muted = true;
 
 
@@ -50,32 +65,40 @@ var glydrs = function(){
   var lastChange = 0;
   // Start our main drawing loop, it provides a timer and the gl context as parameters
   CubicVR.MainLoop(function(timer, gl) {
-    if (video.currentTime > 0) videoTexture.update();
-    physics.stepSimulation(timer.getLastUpdateSeconds());
-    physics.triggerEvents();
-    scene.runEvents(timer.getSeconds());
+    if (videoPlaying){
+      videoTexture.update();
+      physics.stepSimulation(timer.getLastUpdateSeconds());
+      physics.triggerEvents();
+      scene.runEvents(timer.getSeconds());
 
-    if(Math.round(timer.getSeconds())%1 == 0 && lastChange !=Math.round(timer.getSeconds())){
-      lastChange = Math.round(timer.getSeconds());
-      tube.changeColor();
-    }
-
-    for(var i=0;i<playerArray.length;i++){
-      var playerPos = playerArray[i].getSceneObject().position.slice(0);
-      var fov = 90 - Math.floor(( playerArray[i].getLinearVelocity()[1]/30)*5);
-
-      if(playerPos[1] < highScores[i]){
-        highScores[i] = playerPos[1];
-        $('.player'+i).html(Math.round(highScores[i]/-10));
+      if(Math.round(timer.getSeconds())%1 == 0 && lastChange !=Math.round(timer.getSeconds())){
+        lastChange = Math.round(timer.getSeconds());
+        tube.changeColor();
       }
 
-      scene.camera.setFOV(fov);
-      scene.camera.target = playerPos;
-      scene.camera.position = [playerPos[0]+.1,playerPos[1]+12,playerPos[2]];
-      scene.camera.resize(canvas.width/playerArray.length, canvas.height);
-      gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
+      for(var i=0;i<playerArray.length;i++){
+        var playerPos = playerArray[i].getSceneObject().position.slice(0);
+        var fov = 90 - Math.floor(( playerArray[i].getLinearVelocity()[1]/30)*6);
 
-      scene.render();
+        if(playerPos[1] < highScores[i]){
+          highScores[i] = playerPos[1];
+          $('.player'+i).html(Math.round(highScores[i]/-10));
+        }
+
+        scene.camera.setFOV(fov);
+        scene.camera.target = playerPos;
+        scene.camera.position = [playerPos[0]+.1,playerPos[1]+12,playerPos[2]];
+        scene.camera.resize(canvas.width/playerArray.length, canvas.height);
+        gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
+
+        scene.render();
+      }
+    }else if(!gameStarted){
+      if($(video).data('canPlay')){
+        video.play();
+        gameStarted = true;
+        videoPlaying = true;
+      }
     }
   });
 }
