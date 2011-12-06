@@ -42,6 +42,9 @@ io.sockets.on('connection', function (socket) {
     console.log(data);
     io.sockets.emit('updateMove', data);
   });
+  socket.on('kinectReady',function(data){
+    io.socket.emit('kinectUser',data);
+  });
 });
 
 // Routes
