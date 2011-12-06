@@ -81,7 +81,6 @@ var players = {
     //[forward/back, left/right,twist]
 
     player.setRotationEuler([velocity[0]*-2,velocity[2]*2,0]);
-
     if(Math.abs(Math.abs(velocity[1]) + terminalVelocity) > 4){
       if(velocity[1] > terminalVelocity){
         player.applyForce([0,-2,0],[0,0,0]);
@@ -105,6 +104,5 @@ var players = {
         player.applyForce([0,0,2], [0,0,0]);
       }
     }
-
 	}
 };

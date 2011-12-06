@@ -3,7 +3,6 @@ var highScores = [];
 jQuery(document).ready(function(){
   gl = CubicVR.init();
 
-
   var video = document.getElementById('gameVideo');
   video.addEventListener("canplaythrough", function(){
     jQuery(video).data('canPlay',true);
