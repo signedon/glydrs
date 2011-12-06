@@ -221,8 +221,13 @@ jQuery(document).ready(function(){
         kinectData['buttons']['Start_Button'] = 1;
       }
       console.log('onmove',kinectData);
+      
+      socket.emit('kinectPos', kinectData);
     }
   };
+
+  //socket stuff
+  var socket = io.connect('http://localhost:80');
 
   function startGame(){
     if(!gamePlaying){

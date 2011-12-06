@@ -31,6 +31,18 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
+var io = require('socket.io').listen(app);
+
+io.configure(function(){
+  io.set('log level', 1);
+});
+
+io.sockets.on('connection', function (socket) {
+  socket.on('kinectPos',function(data){
+    console.log(data);
+    io.sockets.emit('updateMove', data);
+  });
+});
 
 // Routes
 
