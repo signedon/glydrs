@@ -43,7 +43,7 @@ io.sockets.on('connection', function (socket) {
     io.sockets.emit('updateMove', data);
   });
   socket.on('kinectReady',function(data){
-    io.socket.emit('kinectUser',data);
+    io.sockets.emit('kinectUser',data);
   });
 });
 

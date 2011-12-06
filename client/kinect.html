@@ -43,7 +43,7 @@
           'keyboard':false
         };
         var kinectc = {};
-        socket.emit('kinectReady', kinectc);
+        socket.emit('kinectReady', kinectData);
       },
       onRegister: function(x, y, z, data) {
         $("#registration").text("Hand in view" + (data == null ? "" : ": " + data));
