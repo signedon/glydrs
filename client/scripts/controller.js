@@ -169,7 +169,7 @@ jQuery(document).ready(function(){
   }
 
   //socket stuff
-  var socket = io.connect(window.location.host);
+  var socket = socketIO.connect(window.location.host);
   var gamepadsl = 0;
 
   socket.on('kinectUser', function(data) {
