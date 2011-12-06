@@ -8,7 +8,7 @@
 
   <script src="scripts/thirdParty/depth.js"></script>
   <script>
-    var socket = io.connect('http://localhost:80');
+    var socket = io.connect(window.location.host);
     var kinectData;
     DepthJS = {
       onKinectInit: function() {
