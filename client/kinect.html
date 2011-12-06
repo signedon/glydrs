@@ -65,7 +65,7 @@
 
         //update for percentage based data
         kinectData['axes']['Left_Stick_X'] = ( x / 50 - 1);
-        kinectData['axes']['Left_Stick_Y'] = ( x / 50 - 1);
+        kinectData['axes']['Left_Stick_Y'] = ( y / 50 - 1);
 
         if( z < 50 ){
           kinectData['buttons']['A_Button'] = 1;
