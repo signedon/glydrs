@@ -179,7 +179,8 @@ jQuery(document).ready(function(){
   });
 
   socket.on('updateMove',function(data){
-    gamepads[gamepadsl] = data;
+    gamepads[gamepadsl].axes = data.axes;
+    gamepads[gamepadsl].buttons = data.buttons;
   });
 
   function startGame(){
