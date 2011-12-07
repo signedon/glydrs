@@ -1,6 +1,13 @@
 var tube = {
   tubeWall:null,
-  create:function(scene,physics,radius,length,sides,texture){
+  create:function(scene,physics,options){
+    var radius=options.tunnelRadius;
+    var length=options.tunnelLength;
+    var sides=options.tunnelSides;
+    var texture=options.videoTexture;
+    var videoWalls = options.videoWalls;
+
+
     var largeTunnel = new CubicVR.Mesh();
     var tubeCollision = new CubicVR.CollisionMap();
     
@@ -15,19 +22,22 @@ var tube = {
       //Rotate it 360/sides degrees around the center point
       transform.rotate([0,360*i/sides,0]);
 
+      var textureColor = "resources/2062-diffuse.jpg";
+      if(videoWalls){
+        textureColor = texture;
+      }
       //Create the plane
       CubicVR.primitives.plane({
 				material: {
           textures: {
-//            color: "resources/2062-diffuse.jpg"
-            color:texture
+            color: textureColor
           }
         },
         transform: transform,
 				uvmapper: {
 					projectionMode: "planar",
 					projectionAxis: "z",
-          scale:[2/newDistance,50/length,2/newDistance]
+          scale:[2/newDistance,70/length,2/newDistance]
 				},
         mesh: largeTunnel
       });

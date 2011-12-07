@@ -16,9 +16,18 @@ var glydrs = function(){
   var canvas = CubicVR.getCanvas();
   $(canvas).addClass('active');
 
-  var tunnelRadius = 50;
+  var tunnelRadius = 70;
   var tunnelLength = 23700;//Tuned for a 4 minute video
   var tunnelSides = 6;
+  var coloredBlocks = false;
+  var videoWalls = false;
+  if($('#coloredBlock:checked').length > 0){
+    coloredBlocks = true;
+  }
+  if($('#videoWalls:checked').length > 0){
+    videoWalls = true;
+  }
+  console.log($('#videoWalls'));
 
 
   $('#gameVideo').hide();
@@ -53,9 +62,20 @@ var glydrs = function(){
   }, false);
   var videoPlaying = false;
 //  video.muted = true;
-  tube.create(scene,physics,tunnelRadius,tunnelLength,tunnelSides,videoTexture);
+  tube.create(scene,physics,{
+    tunnelRadius:tunnelRadius,
+    tunnelLength:tunnelLength,
+    tunnelSides:tunnelSides,
+    videoTexture:videoTexture,
+    videoWalls:videoWalls
+  });
 
-  obstacles.generateMap(scene,physics,tunnelRadius,tunnelLength,videoTexture);
+  obstacles.generateMap(scene,physics,{
+    tunnelRadius:tunnelRadius,
+    tunnelLength:tunnelLength,
+    videoTexture:videoTexture,
+    coloredBlocks:coloredBlocks
+  });
   var lastChange = 0;
   // Start our main drawing loop, it provides a timer and the gl context as parameters
   CubicVR.MainLoop(function(timer, gl) {

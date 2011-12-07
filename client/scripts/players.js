@@ -61,15 +61,15 @@ var players = {
 	_applyPlayerForces:function(player,controls) {
     player.setAngularVelocity([0,0,0]);
     var velocity = player.getLinearVelocity();
-    var terminalVelocity = -150;
-    var maxVelocity = 20;
+    var terminalVelocity = -200;
+    var maxVelocity = 70;
     var rotationModifier = 2;
-    var modifier = 5;
+    var modifier = 15;
     if(controls.buttons.A_Button != 0){
       rotationModifier = .5;
-      modifier = 10;
-      maxVelocity = 30;
-      terminalVelocity = -120;
+      modifier = 20;
+      maxVelocity = 90;
+      terminalVelocity = -150;
     }
 
     if (Math.abs(velocity[0]) < maxVelocity) {
@@ -80,7 +80,8 @@ var players = {
     }
     //[forward/back, left/right,twist]
 
-    player.setRotationEuler([velocity[0]*-2,velocity[2]*2,0]);
+    player.setRotationEuler([(velocity[0]/maxVelocity)*-30,(velocity[2]/maxVelocity)*30,0]);
+
     if(Math.abs(Math.abs(velocity[1]) + terminalVelocity) > 4){
       if(velocity[1] > terminalVelocity){
         player.applyForce([0,-2,0],[0,0,0]);
@@ -92,16 +93,16 @@ var players = {
 
     if (Math.abs(velocity[0]) > 1) {
       if (velocity[0] > 0) {
-        player.applyForce([-2,0,0], [0,0,0]);
+        player.applyForce([-3,0,0], [0,0,0]);
       } else {
-        player.applyForce([2,0,0], [0,0,0]);
+        player.applyForce([3,0,0], [0,0,0]);
       }
     }
     if (Math.abs(velocity[2]) > 1) {
       if (velocity[2] > 0) {
-        player.applyForce([0,0,-2], [0,0,0]);
+        player.applyForce([0,0,-3], [0,0,0]);
       } else {
-        player.applyForce([0,0,2], [0,0,0]);
+        player.applyForce([0,0,3], [0,0,0]);
       }
     }
 	}

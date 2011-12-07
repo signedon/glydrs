@@ -1,29 +1,29 @@
 var obstacles = {
-  generateMap:function(scene,physics,tunnelRadius,tunnelLength,videoTexture){
+  generateMap:function(scene,physics,options){
+    var tunnelRadius=options.tunnelRadius;
+    var tunnelLength=options.tunnelLength;
+    var videoTexture=options.videoTexture;
+    var coloredBlocks=options.coloredBlocks;
+
+
     for(var i=200;i<tunnelLength;i=i+50){
       var myTunnelRadius = tunnelRadius-10;
       var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i+(Math.random()*20-20),(Math.random()*myTunnelRadius*2)-myTunnelRadius];
-      obstacles.spawn(scene,physics,videoTexture,location,myTunnelRadius);
+      obstacles.spawn(scene,physics,{
+        videoTexture:videoTexture,
+        coloredBlocks:coloredBlocks,
+        position:location,
+        tunnelRadius:myTunnelRadius
+      });
     }
   },
-	spawn: function(scene,physics,videoTexture,position,tunnelRadius) {
-//		var position = player.getSceneObject().position.slice(0);
-//		position[1] -= 1000;
-//    position[0] +=(Math.random()-.5)*25;
-//    position[2] +=(Math.random()-.5)*25;
-//		var lastObstacleHeight = player.getSceneObject().getProperty('lastObstacleHeight');
-//		if(typeof lastObstacleHeight == 'undefined'){
-//			lastObstacleHeight = 0;
-//		}
+	spawn: function(scene,physics,options) {
+    var videoTexture=options.videoTexture;
+    var position=options.position;
+    var tunnelRadius = options.tunnelRadius;
+    var coloredBlocks = options.coloredBlocks;
 
-    var scale = [35,15,35];
-
-//		if (Math.abs(lastObstacleHeight-position[1]) < 5) {
-//			return;
-//		} else {
-//			player.getSceneObject().setProperty('lastObstacleHeight',position[1]);
-//		}
-
+    var scale = [50,15,50];
 
 		var material = new CubicVR.Material({
 			textures: {
@@ -32,20 +32,19 @@ var obstacles = {
 			}
 		});
 
-    
-		var mesh = new CubicVR.Mesh({
-			primitive: {
-				type: "box",
-				size: 1.0,
-				material: material,
-				uvmapper: {
-					projectionMode: "cubic",
-					scale: [(tunnelRadius*2)/scale[0]*1.25, scale[1], (tunnelRadius*2)/scale[2]],
+    var mesh = new CubicVR.Mesh({
+      primitive: {
+        type: "box",
+        size: 1.0,
+        material: material,
+        uvmapper: {
+          projectionMode: "cubic",
+          scale: [(tunnelRadius*2)/scale[0]*1.25, scale[1], (tunnelRadius*2)/scale[2]],
           center: [-1*(position[2]/scale[2]),0,(position[0]/scale[0])]
-				}
-			},
-			compile: true
-		});
+        }
+      },
+      compile: true
+    });
 
 
 		var box = new CubicVR.SceneObject({
@@ -85,13 +84,9 @@ var obstacles = {
 //		});
 //		scene.bind(wireframeBox);
 
-
-    
-
-
-//		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
-
-
+    if(coloredBlocks){
+      box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
+    }
 		box.addEvent({
 			id: CubicVR.enums.event.CONTACT_GHOST,
 			action: function(event,handler){
@@ -101,14 +96,14 @@ var obstacles = {
 
 		scene.bind(box);
 
-		var rigidBox = new CubicVR.RigidBody(box, {
-			type: 'ghost',
-			collision: {
-				type: CubicVR.enums.collision.shape.BOX,
-				size: box.scale
-			},
-			blocker:true
-		});
+    var rigidBox = new CubicVR.RigidBody(box, {
+      type: 'ghost',
+      collision: {
+        type: CubicVR.enums.collision.shape.BOX,
+        size: box.scale
+      },
+      blocker:true
+    });
 		physics.bind(rigidBox);
 	}
 }
