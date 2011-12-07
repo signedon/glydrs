@@ -5,14 +5,27 @@ var obstacles = {
     var videoTexture=options.videoTexture;
     var coloredBlocks=options.coloredBlocks;
 
-
-    for(var i=200;i<tunnelLength;i=i+50){
+    var myTunnel = [];
+    for(var i=200;i<tunnelLength;i=i+100){
       var myTunnelRadius = tunnelRadius-10;
+
+//      var num = Math.round(Math.random()*2);
+//      var num1 = Math.round(Math.random()*2);
+
       var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i+(Math.random()*20-20),(Math.random()*myTunnelRadius*2)-myTunnelRadius];
+      myTunnel.push({
+        location:location,
+        size:[50,10,50]
+      });
+    }
+
+
+    for(var i=0;i<myTunnel.length;i++){
       obstacles.spawn(scene,physics,{
         videoTexture:videoTexture,
         coloredBlocks:coloredBlocks,
-        position:location,
+        position:myTunnel[i].location,
+        size:myTunnel[i].size,
         tunnelRadius:myTunnelRadius
       });
     }
@@ -22,8 +35,11 @@ var obstacles = {
     var position=options.position;
     var tunnelRadius = options.tunnelRadius;
     var coloredBlocks = options.coloredBlocks;
+    var scale = [100,10,100];
+    if(options.size){
+      scale = options.size;
+    }
 
-    var scale = [50,10,50];
 
 		var material = new CubicVR.Material({
 			textures: {
@@ -90,7 +106,7 @@ var obstacles = {
 		box.addEvent({
 			id: CubicVR.enums.event.CONTACT_GHOST,
 			action: function(event,handler){
-        players.killPlayer(event.event_properties.contacts[0]);
+//        players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
 
@@ -101,8 +117,8 @@ var obstacles = {
       collision: {
         type: CubicVR.enums.collision.shape.BOX,
         size: box.scale
-      },
-      blocker:true
+      }
+//      blocker:true
     });
 		physics.bind(rigidBox);
 	}

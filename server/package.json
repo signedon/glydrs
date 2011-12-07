@@ -8,6 +8,6 @@
     "request": "2.2.x",
     "colors": "0.5.x",
     "underscore": "1.2.x",
-    "cradle": "0.5.7"
+    "cradle": "0.x"
   }
 }
