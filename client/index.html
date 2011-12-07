@@ -16,6 +16,7 @@
   </script>
   
   <!--Libraries-->
+  <script src="scripts/thirdParty/handlebars.1.0.0.beta.3.js"></script>
   <script type="text/javascript" src="scripts/thirdParty/cubicvr/CubicVR.min.js"></script>
   <script type="text/javascript" src="scripts/thirdParty/cubicvr/ammo.js"></script>
   <script type="text/javascript" src="scripts/thirdParty/input.js"></script>
@@ -31,6 +32,7 @@
   <script type="text/javascript" src="scripts/beat.js"></script>
 
   <style>
+    @import url(http://fonts.googleapis.com/css?family=Aldrich);
     .playerScore{
       position:absolute;
       z-index: 1000;
@@ -44,6 +46,62 @@
     }
     canvas.active{
       z-index:1;
+    }
+    #endGame{
+      background: rgba(255,255,255,0.7);
+      display: none;
+      font-family: 'Aldrich', sans-serif;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+    }
+    #endGame h1{
+      text-shadow: 5px 5px 3px #888; 
+      margin: 150px 0 0 0;
+      text-align: center;
+    }
+    #endGame form{
+      position: relative;
+      margin: 0 auto;
+      width: 400px;
+    }
+    #scoreContainer{
+      border: 1px solid #000;
+      margin: 20px auto 20px;
+      padding: 25px;
+      position: relative;
+      width: 300px;
+      -webkit-box-shadow: 5px 5px 4px #000; 
+         -moz-box-shadow: 5px 5px 4px #000; 
+              box-shadow: 5px 5px 4px #000; 
+    }
+    #scoreContainer h2{
+      position: relative;
+      text-align: center;
+    }
+    #scoreContainer span{
+      color: #FFD700;
+    }
+    .winner{
+      float: right;
+      height: 25px;
+      margin:-45px 0 0 0;
+      position: relative;
+      width: 25px;
+    }
+    .winner:hover{
+      cursor: pointer;
+    }
+    #username{
+      position: relative;
+      margin: 0 auto;
+      width: 150px;
+    }
+    #submitScore{
+      display: none;
     }
   </style>
 </head>
@@ -76,6 +134,31 @@
 
   <!--We Come Together - Goldfish-->
    <video id='gameVideo' src="/resources/WeComeTogether.webm" preload="auto" width="480" height="360" ></video>
+
+   <!--End Game Screen-->
+  <div id="endGame">
+    <h1>High Scores</h1>
+    <div id="scoreContainer">
+
+    </div>
+    <form id="submitScore">
+      <label for="username">Enter Username:</label>
+      <input type="text" name="username" id="username" value="" />
+      <button id="submit">Submit</button>
+    </form>
+  </div>
+  <script id="scores-template" type="text/x-handlebars-template">
+      {{#scores}}
+        {{#if isHighScore}}
+          <h2 id="win">{{player}} : <span>{{playerScore}}</span></h2>
+          <svg width="25px" height="25px" version="1.1" class="winner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image xlink:href="resources/crown.svg" x="0" y="0" height="25px" width="25px"/>
+          </svg>
+          {{else}}
+          <h2>{{player}} : <span>{{playerScore}}</span></h2>
+        {{/if}}
+      {{/scores}}
+  </script>
 
 </body>
 </html>

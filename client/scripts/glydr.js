@@ -56,7 +56,9 @@ var glydrs = function(){
   var gameStarted = false;
   video.addEventListener("ended", function(){
     videoPlaying = false;
-    alert('Game Over');
+    //alert('Game Over');
+    gameEnd(highScores)
+    console.log(highScores)
   }, false);
   var videoPlaying = false;
 //  video.muted = true;
@@ -74,6 +76,49 @@ var glydrs = function(){
     videoTexture:videoTexture,
     coloredBlocks:coloredBlocks
   });
+
+  //endgame func
+  function gameEnd(scores){
+      $('#endGame').toggle();
+      var socket = socketIO.connect(window.location.host);
+      var scoreTemplate = $('#scores-template').html();
+      var compiledTemplate = Handlebars.compile(scoreTemplate);
+      var scoreLen = scores.length;
+      var scoreArr = [];
+      var highScore = Math.max.apply(Math, scores);
+
+      for(var i = 0; i < scoreLen; i++){
+        var scoreObj = {};
+        scoreObj['player'] = 'Player ' + [ i + 1 ];
+        scoreObj['playerScore'] = scores[i];
+        scoreObj['isHighScore'] = false;
+        if(scores[i] == highScore){
+          scoreObj['isHighScore'] = 'winner';
+        }
+        scoreArr.push(scoreObj);
+      }
+      var fullScoreObj = {scores : scoreArr};
+      $('#scoreContainer').html(compiledTemplate(fullScoreObj));
+      $('svg').live('click',function(){
+        $('#submitScore').toggle();
+      });
+      $('#submit').live('click',function(e){
+        e.preventDefault();
+        var playerName = $('#username').val();
+        var playerScore = $('#win span').text();
+        var videoId = $('#videoID').val() || 'WeComeTogether';
+        var finalScore = {
+          player : playerName,
+          score  : playerScore,
+          vidID  : videoId
+        };
+        socket.emit('highscore', finalScore);
+      });
+      socket.on('sucesshighscore', function(data) {
+        console.log(data);
+      });
+    };
+
   var lastChange = 0;
   // Start our main drawing loop, it provides a timer and the gl context as parameters
   CubicVR.MainLoop(function(timer, gl) {
