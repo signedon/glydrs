@@ -57,8 +57,11 @@ var glydrs = function(){
   video.addEventListener("ended", function(){
     videoPlaying = false;
     //alert('Game Over');
-    gameEnd(highScores)
-    console.log(highScores)
+    var myHighScores = [];
+    for(var i=0;i<highScores.length;i++){
+      myHighScores[i] = Math.round(highScores[i]/-10)
+    }
+    gameEnd(myHighScores);
   }, false);
   var videoPlaying = false;
 //  video.muted = true;
@@ -90,7 +93,7 @@ var glydrs = function(){
       for(var i = 0; i < scoreLen; i++){
         var scoreObj = {};
         scoreObj['player'] = 'Player ' + [ i + 1 ];
-        scoreObj['playerScore'] = Math.round(scores[i]/-10);
+        scoreObj['playerScore'] = scores[i];
         scoreObj['isHighScore'] = false;
         if(scores[i] == highScore){
           scoreObj['isHighScore'] = 'winner';
