@@ -186,7 +186,8 @@ jQuery(document).ready(function(){
   function startGame(){
     if(!gamePlaying){
       gamePlaying = true;
-      jQuery('.instructions').html("Starting game with "+gamepads.length+" players.");
+      jQuery('.instructions').hide();
+      jQuery('.notifications').html("Starting game with "+gamepads.length+" players.");
       jQuery('.playerDisplay').html('');
       setTimeout('glydrs()',100);
     }

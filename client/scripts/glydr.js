@@ -10,6 +10,7 @@ jQuery(document).ready(function(){
 
 });
 var glydrs = function(){
+  console.log('Test 123456');
   var $ = jQuery;
   var playerArray = [];
   var inputControls = {};
@@ -21,15 +22,13 @@ var glydrs = function(){
   var tunnelSides = 6;
   var coloredBlocks = false;
   var videoWalls = false;
-  if($('#coloredBlock:checked').length > 0){
+  if(jQuery('#coloredBlock:checked').length > 0){
     coloredBlocks = true;
   }
-  if($('#videoWalls:checked').length > 0){
+  if(jQuery('#videoWalls:checked').length > 0){
     videoWalls = true;
   }
-  console.log($('#videoWalls'));
-
-
+  
   $('#gameVideo').hide();
   if (!gl) {
     alert("Sorry, no WebGL support.");
