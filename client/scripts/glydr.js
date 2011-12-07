@@ -56,11 +56,11 @@ var glydrs = function(){
   var gameStarted = false;
   video.addEventListener("ended", function(){
     videoPlaying = false;
-    //alert('Game Over');
     var myHighScores = [];
     for(var i=0;i<highScores.length;i++){
-      myHighScores[i] = Math.round(highScores[i]/-10)
+      myHighScores[i] = Math.round(highScores[i]/-10);
     }
+    $('.playerScore').hide();
     gameEnd(myHighScores);
   }, false);
   var videoPlaying = false;
@@ -73,7 +73,7 @@ var glydrs = function(){
     videoWalls:videoWalls
   });
 
-  obstacles.generateMap(scene,physics,{
+  var map = obstacles.generateMap(scene,physics,{
     tunnelRadius:tunnelRadius,
     tunnelLength:tunnelLength,
     videoTexture:videoTexture,
