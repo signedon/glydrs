@@ -90,7 +90,7 @@ var glydrs = function(){
       for(var i = 0; i < scoreLen; i++){
         var scoreObj = {};
         scoreObj['player'] = 'Player ' + [ i + 1 ];
-        scoreObj['playerScore'] = scores[i];
+        scoreObj['playerScore'] = Math.round(scores[i]/-10);
         scoreObj['isHighScore'] = false;
         if(scores[i] == highScore){
           scoreObj['isHighScore'] = 'winner';
