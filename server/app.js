@@ -50,34 +50,48 @@ io.sockets.on('connection', function (socket) {
   });
   socket.on('highscore',function(data){
     console.log('data',data)
-    db.get(data.vidID,function(err,doc){
-      if(err){
+    db.exists(function (err, exists) {
+      if (err) {
+        console.log('error', err);
+      } else if (exists) {
+        db.get(data.vidID,function(err,doc){
+          if(err){
+            db.save(data.vidID,data,function(err,res){
+              console.log('res',res);
+              if(res.ok == true){
+                io.sockets.emit('sucesshighscore','true');
+              }
+            });
+          }else{
+            console.log('doc',doc);
+            if(doc.score > data.score){
+              io.sockets.emit('sucesshighscore','notHighscore');
+            }else{
+              var newDoc = {
+                _id : doc._id,
+                player : data.player,
+                score : data.score,
+                vidID : doc.vidID
+              };
+              console.log(newDoc);
+              db.merge(data.vidID, newDoc, function (err, res) {
+                if(res.ok == true){
+                  io.sockets.emit('sucesshighscore','true');
+                }else{
+                  console.log('not');
+                }
+              });
+            }
+          }
+        });
+      } else {
+        db.create();
         db.save(data.vidID,data,function(err,res){
           console.log('res',res);
           if(res.ok == true){
             io.sockets.emit('sucesshighscore','true');
           }
         });
-      }else{
-        console.log('doc',doc);
-        if(doc.score > data.score){
-          io.sockets.emit('sucesshighscore','notHighscore');
-        }else{
-          var newDoc = {
-            _id : doc._id,
-            player : data.player,
-            score : data.score,
-            vidID : doc.vidID
-          };
-          console.log(newDoc);
-          db.merge(data.vidID, newDoc, function (err, res) {
-            if(res.ok == true){
-              io.sockets.emit('sucesshighscore','true');
-            }else{
-              console.log('not');
-            }
-          });
-        }
       }
     });
   });
