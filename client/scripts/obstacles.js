@@ -23,7 +23,7 @@ var obstacles = {
     var tunnelRadius = options.tunnelRadius;
     var coloredBlocks = options.coloredBlocks;
 
-    var scale = [50,15,50];
+    var scale = [50,10,50];
 
 		var material = new CubicVR.Material({
 			textures: {

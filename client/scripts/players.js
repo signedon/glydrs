@@ -1,9 +1,9 @@
 var players = {
 	playerCount:0,
   killPlayer:function(player){
-    player.reset();
+     player.reset();
   },
-	spawn:function(scene, physics,location,controls) {
+	spawn:function(scene,physics,location,controls) {
 		this.playerCount++;
 		if(!location){
 			location = [0,0,0];
@@ -32,6 +32,7 @@ var players = {
 			position:location,
 			scale:[1.3*sizeModifier,.5*sizeModifier,1*sizeModifier]
 		});
+    box.setProperty('id',this.playerCount);
 		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
 
@@ -64,10 +65,10 @@ var players = {
     var terminalVelocity = -200;
     var maxVelocity = 70;
     var rotationModifier = 2;
-    var modifier = 15;
+    var modifier = 40;
     if(controls.buttons.A_Button != 0){
       rotationModifier = .5;
-      modifier = 20;
+      modifier = 45;
       maxVelocity = 90;
       terminalVelocity = -150;
     }
@@ -84,26 +85,33 @@ var players = {
 
     if(Math.abs(Math.abs(velocity[1]) + terminalVelocity) > 4){
       if(velocity[1] > terminalVelocity){
-        player.applyForce([0,-2,0],[0,0,0]);
+        player.applyForce([0,-8,0],[0,0,0]);
       }else{
-        player.applyForce([0,4,0],[0,0,0]);
+        player.applyForce([0,8,0],[0,0,0]);
       }
     }
 
-
-    if (Math.abs(velocity[0]) > 1) {
+    velocity = player.getLinearVelocity();
+    var directionalForce = 15;
+    if (Math.abs(velocity[0]) > 10) {
       if (velocity[0] > 0) {
-        player.applyForce([-3,0,0], [0,0,0]);
+        player.applyForce([-directionalForce,0,0], [0,0,0]);
       } else {
-        player.applyForce([3,0,0], [0,0,0]);
+        player.applyForce([directionalForce,0,0], [0,0,0]);
       }
+    }else{
+      velocity = player.getLinearVelocity();
+      player.setLinearVelocity([0,velocity[1],velocity[2]]);
     }
-    if (Math.abs(velocity[2]) > 1) {
+    if (Math.abs(velocity[2]) > 10) {
       if (velocity[2] > 0) {
-        player.applyForce([0,0,-3], [0,0,0]);
+        player.applyForce([0,0,-directionalForce], [0,0,0]);
       } else {
-        player.applyForce([0,0,3], [0,0,0]);
+        player.applyForce([0,0,directionalForce], [0,0,0]);
       }
+    }else{
+       velocity = player.getLinearVelocity();
+      player.setLinearVelocity([velocity[0],velocity[1],0]);
     }
 	}
 };
