@@ -121,11 +121,10 @@ var glydrs = function(){
         socket.emit('highscore', finalScore);
       });
       socket.on('sucesshighscore', function(data) {
-        console.log(data);
-        if(!true){
-          $('.endNotification').text('You do not have the highest score out of everyone');
-        }else{
+        if(data == true){
           $('.endNotification').text('You have the highest score ever!!!!!');
+        }else{
+          $('.endNotification').text('You do not have the highest score out of everyone');
         }
       });
     };
