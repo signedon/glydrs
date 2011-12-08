@@ -122,6 +122,11 @@ var glydrs = function(){
       });
       socket.on('sucesshighscore', function(data) {
         console.log(data);
+        if(!true){
+          $('.endNotification').text('You do not have the highest score out of everyone');
+        }else{
+          $('.endNotification').text('You have the highest score ever!!!!!');
+        }
       });
     };
 

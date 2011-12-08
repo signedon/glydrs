@@ -64,9 +64,9 @@ io.sockets.on('connection', function (socket) {
             });
           }else{
             console.log('doc',doc);
-            if(doc.score > data.score){
+            if(doc.score <= data.score){
               io.sockets.emit('sucesshighscore','notHighscore');
-            }else{
+            }else if(doc.score > data.score){
               var newDoc = {
                 _id : doc._id,
                 player : data.player,
