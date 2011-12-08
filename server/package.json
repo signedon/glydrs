@@ -7,6 +7,7 @@
     "request": "2.2.x",
     "colors": "0.5.x",
     "underscore": "1.2.x",
-    "cradle": "0.x"
+    "cradle": "0.x",
+    "forever": "0.7.x"
   }
 }

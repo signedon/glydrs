@@ -185,7 +185,6 @@ app.get('/video/:vid', function(req, res){
       });*/
       return resp.pipe(res);
 
-
     });
 
     v_request.end();
