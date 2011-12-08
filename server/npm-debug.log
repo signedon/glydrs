@@ -1,0 +1,736 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'socket.io' ]
+info using npm@1.1.0-alpha-2
+info using node@v0.6.3
+verbose config file /home/diversario/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose caching /home/diversario/Documents/Projects/glydrs/server/package.json
+verbose loadDefaults YProxy@0.0.1
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/express/package.json
+verbose loadDefaults express@2.5.1
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/underscore/package.json
+verbose loadDefaults underscore@1.2.3
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/colors/package.json
+verbose loadDefaults colors@0.5.1
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/cradle/package.json
+verbose loadDefaults cradle@0.5.7
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/jade/package.json
+verbose loadDefaults jade@0.18.0
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/request/package.json
+verbose loadDefaults request@2.2.9
+verbose from cache /home/diversario/Documents/Projects/glydrs/server/package.json
+verbose into /home/diversario/Documents/Projects/glydrs/server [ 'socket.io' ]
+verbose cache add socket.io
+verbose cache add [ 'socket.io', null ]
+silly cache add: name, spec, args [ undefined, 'socket.io', [ 'socket.io', null ] ]
+verbose parsed url { pathname: 'socket.io', path: 'socket.io', href: 'socket.io' }
+info addNamed [ 'socket.io', '' ]
+verbose addNamed [ null, '' ]
+verbose GET socket.io
+verbose raw, before any munging socket.io
+verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+verbose url resolved https://registry.npmjs.org/socket.io
+verbose etag "8NCNYLT1ZVGNVDHVSZ20YV3C8"
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"8NCNYLT1ZVGNVDHVSZ20YV3C8"',
+silly get cb     date: 'Thu, 08 Dec 2011 15:48:27 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag socket.io from cache
+verbose GET socket.io/0.8.7
+verbose raw, before any munging socket.io/0.8.7
+verbose url resolving [ 'https://registry.npmjs.org/', './socket.io/0.8.7' ]
+verbose url resolved https://registry.npmjs.org/socket.io/0.8.7
+verbose etag "8NCNYLT1ZVGNVDHVSZ20YV3C8"
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"8NCNYLT1ZVGNVDHVSZ20YV3C8"',
+silly get cb     date: 'Thu, 08 Dec 2011 15:48:27 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag socket.io/0.8.7 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0e-v83.6.6.8-linux-ia32-3.0.0-13-generic',
+verbose bin dist   { shasum: '98419cb68859a6fc5ec8d49f50dcdbbe2ffd4466',
+verbose bin dist     tarball: 'http://registry.npmjs.org/socket.io/-/socket.io-0.8.7.tgz' } ]
+verbose caching /home/diversario/.npm/socket.io/0.8.7/package/package.json
+verbose loadDefaults socket.io@0.8.7
+silly resolved [ { name: 'socket.io',
+silly resolved     version: '0.8.7',
+silly resolved     description: 'Real-time apps made cross-browser & easy with a WebSocket-like API',
+silly resolved     homepage: 'http://socket.io',
+silly resolved     keywords: [ 'websocket', 'socket', 'realtime', 'socket.io', 'comet', 'ajax' ],
+silly resolved     author: { name: 'Guillermo Rauch', email: 'guillermo@learnboost.com' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Guillermo Rauch', email: 'rauchg@gmail.com' },
+silly resolved        { name: 'Arnout Kazemier', email: 'info@3rd-eden.com' },
+silly resolved        { name: 'Vladimir Dronnikov', email: 'dronnikov@gmail.com' },
+silly resolved        { name: 'Einar Otto Stangvik', email: 'einaros@gmail.com' } ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/LearnBoost/socket.io.git' },
+silly resolved     dependencies: 
+silly resolved      { 'socket.io-client': '0.8.7',
+silly resolved        policyfile: '0.0.4',
+silly resolved        redis: '0.6.7' },
+silly resolved     devDependencies: 
+silly resolved      { expresso: '0.9.2',
+silly resolved        should: '0.0.4',
+silly resolved        assertvanish: '0.0.3-1',
+silly resolved        benchmark: '0.2.2',
+silly resolved        microtime: '0.1.3-1',
+silly resolved        colors: '0.5.1' },
+silly resolved     main: 'index',
+silly resolved     engines: { node: '>= 0.4.0' },
+silly resolved     _id: 'socket.io@0.8.7',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-alpha-2',
+silly resolved     _nodeVersion: 'v0.6.3',
+silly resolved     _defaultsLoaded: true,
+silly resolved     scripts: {} } ]
+info into /home/diversario/Documents/Projects/glydrs/server socket.io@0.8.7
+info installOne socket.io@0.8.7
+info unbuild /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/package.json
+verbose loadDefaults socket.io@0.8.7
+info preuninstall socket.io@0.8.7
+info uninstall socket.io@0.8.7
+verbose unbuild socket.io@0.8.7 [ true,
+verbose unbuild socket.io@0.8.7   '/home/diversario/Documents/Projects/glydrs/server/node_modules',
+verbose unbuild socket.io@0.8.7   '/home/diversario/Documents/Projects/glydrs/server/node_modules' ]
+info postuninstall socket.io@0.8.7
+verbose from cache /home/diversario/.npm/socket.io/0.8.7/package/package.json
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm'
+verbose mkdir done: /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/.npmignore
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/Makefile
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/package.json
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/Readme.md
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/History.md
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/index.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/.gitignore
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/benchmarks
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/benchmarks/encode.bench.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/benchmarks/decode.bench.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/benchmarks/runner.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/parser.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/manager.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.xhr-polling.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/io.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.flashsocket.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.websocket.hybi16.parser.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/stores.redis.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/common.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/static.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.websocket.hybi07-12.parser.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/stores.memory.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.websocket.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.htmlfile.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/transports.jsonp-polling.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/hybi-common.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/namespace.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/fixtures
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/fixtures/key.key
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/fixtures/cert.crt
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/leaks
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/test/leaks/socket.leaktest.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/namespace.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/parser.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/socket.io.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/socket.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transport.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/util.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/logger.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/static.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/manager.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/store.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/stores
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/stores/redis.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/stores/memory.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/http.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/http-polling.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/flashsocket.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/jsonp-polling.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/xhr-polling.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/index.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/htmlfile.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket/hybi-16.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket/default.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket/hybi-07-12.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket/hybi-17.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/lib/transports/websocket/index.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/Makefile
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/README.md
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/package.json
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/LICENSE
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-server-close.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-basic.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-client-close.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-unix-send-fd.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-readonly-attrs.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-unix-sockets.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/test/test-ready-state.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/lib
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/lib/websocket.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/examples
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/examples/server-unix.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/examples/client-unix.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/support/node-websocket-client/examples/client.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/package.json
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/app.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/index.jade
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/public
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/public/stylesheets
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/public/stylesheets/style.styl
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/public/stylesheets/mixins.styl
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/chat/public/stylesheets/style.css
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/package.json
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/app.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/index.jade
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/irc.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/public
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/public/stylesheets
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package/examples/irc-output/public/stylesheets/style.styl
+silly chmod package 755
+silly chmod .npmignore 644
+silly chmod Makefile 644
+silly chmod package.json 644
+silly chmod Readme.md 644
+silly chmod History.md 644
+silly chmod index.js 644
+silly chmod .gitignore 644
+silly chmod benchmarks 755
+silly chmod encode.bench.js 644
+silly chmod decode.bench.js 644
+silly chmod runner.js 644
+silly chmod test 755
+silly chmod parser.test.js 644
+silly chmod manager.test.js 644
+silly chmod transports.xhr-polling.test.js 644
+silly chmod io.test.js 644
+silly chmod transports.flashsocket.test.js 644
+silly chmod transports.websocket.hybi16.parser.test.js 644
+silly chmod stores.redis.test.js 644
+silly chmod common.js 644
+silly chmod static.test.js 644
+silly chmod transports.websocket.hybi07-12.parser.test.js 644
+silly chmod stores.memory.test.js 644
+silly chmod transports.websocket.test.js 644
+silly chmod transports.htmlfile.test.js 644
+silly chmod transports.jsonp-polling.test.js 644
+silly chmod hybi-common.js 644
+silly chmod namespace.test.js 644
+silly chmod fixtures 755
+silly chmod key.key 644
+silly chmod cert.crt 644
+silly chmod leaks 755
+silly chmod socket.leaktest.js 644
+silly chmod lib 755
+silly chmod namespace.js 644
+silly chmod parser.js 644
+silly chmod socket.io.js 644
+silly chmod socket.js 644
+silly chmod transport.js 644
+silly chmod util.js 644
+silly chmod logger.js 644
+silly chmod static.js 644
+silly chmod manager.js 644
+silly chmod store.js 644
+silly chmod stores 755
+silly chmod redis.js 644
+silly chmod memory.js 644
+silly chmod transports 755
+silly chmod http.js 644
+silly chmod http-polling.js 644
+silly chmod flashsocket.js 644
+silly chmod jsonp-polling.js 644
+silly chmod xhr-polling.js 644
+silly chmod websocket.js 644
+silly chmod index.js 644
+silly chmod htmlfile.js 644
+silly chmod websocket 755
+silly chmod hybi-16.js 644
+silly chmod default.js 644
+silly chmod hybi-07-12.js 644
+silly chmod hybi-17.js 644
+silly chmod index.js 644
+silly chmod support 755
+silly chmod node-websocket-client 755
+silly chmod Makefile 644
+silly chmod README.md 644
+silly chmod package.json 644
+silly chmod LICENSE 644
+silly chmod test 755
+silly chmod test-server-close.js 644
+silly chmod test-basic.js 644
+silly chmod test-client-close.js 644
+silly chmod test-unix-send-fd.js 644
+silly chmod test-readonly-attrs.js 644
+silly chmod test-unix-sockets.js 644
+silly chmod test-ready-state.js 644
+silly chmod lib 755
+silly chmod websocket.js 644
+silly chmod examples 755
+silly chmod server-unix.js 644
+silly chmod client-unix.js 644
+silly chmod client.js 644
+silly chmod examples 755
+silly chmod chat 755
+silly chmod package.json 644
+silly chmod app.js 644
+silly chmod index.jade 644
+silly chmod public 755
+silly chmod stylesheets 755
+silly chmod style.styl 644
+silly chmod mixins.styl 644
+silly chmod style.css 644
+silly chmod irc-output 755
+silly chmod package.json 644
+silly chmod app.js 644
+silly chmod index.jade 644
+silly chmod irc.js 644
+silly chmod public 755
+silly chmod stylesheets 755
+silly chmod style.styl 644
+verbose gunzed /home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package
+verbose rm'ed /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io
+verbose renamed [ '/home/diversario/Documents/Projects/glydrs/server/node_modules/___socket.io.npm/package',
+verbose renamed   '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io' ]
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/package.json
+verbose loadDefaults socket.io@0.8.7
+info preinstall socket.io@0.8.7
+verbose from cache /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/package.json
+verbose into /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io [ 'socket.io-client@0.8.7', 'policyfile@0.0.4', 'redis@0.6.7' ]
+verbose cache add socket.io-client@0.8.7
+verbose cache add [ 'socket.io-client@0.8.7', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'socket.io-client@0.8.7',
+silly cache add: name, spec, args   [ 'socket.io-client@0.8.7', null ] ]
+verbose parsed url { pathname: 'socket.io-client@0.8.7',
+verbose parsed url   path: 'socket.io-client@0.8.7',
+verbose parsed url   href: 'socket.io-client@0.8.7' }
+silly cache add: name, spec, args [ 'socket.io-client', '0.8.7', [ 'socket.io-client', '0.8.7' ] ]
+verbose parsed url { pathname: '0.8.7', path: '0.8.7', href: '0.8.7' }
+info addNamed [ 'socket.io-client', '0.8.7' ]
+verbose addNamed [ '0.8.7', '0.8.7' ]
+verbose cache add policyfile@0.0.4
+verbose cache add [ 'policyfile@0.0.4', null ]
+silly cache add: name, spec, args [ undefined, 'policyfile@0.0.4', [ 'policyfile@0.0.4', null ] ]
+verbose parsed url { pathname: 'policyfile@0.0.4',
+verbose parsed url   path: 'policyfile@0.0.4',
+verbose parsed url   href: 'policyfile@0.0.4' }
+silly cache add: name, spec, args [ 'policyfile', '0.0.4', [ 'policyfile', '0.0.4' ] ]
+verbose parsed url { pathname: '0.0.4', path: '0.0.4', href: '0.0.4' }
+info addNamed [ 'policyfile', '0.0.4' ]
+verbose addNamed [ '0.0.4', '0.0.4' ]
+verbose GET socket.io-client/0.8.7
+verbose raw, before any munging socket.io-client/0.8.7
+verbose url resolving [ 'https://registry.npmjs.org/', './socket.io-client/0.8.7' ]
+verbose url resolved https://registry.npmjs.org/socket.io-client/0.8.7
+verbose etag "BFI2ZQ9CIB3BCNED2N3JP8NRG"
+verbose GET policyfile/0.0.4
+verbose raw, before any munging policyfile/0.0.4
+verbose url resolving [ 'https://registry.npmjs.org/', './policyfile/0.0.4' ]
+verbose url resolved https://registry.npmjs.org/policyfile/0.0.4
+verbose etag "ECCD70BYEJVWXWFOFXG2LLGWD"
+verbose cache add redis@0.6.7
+verbose cache add [ 'redis@0.6.7', null ]
+silly cache add: name, spec, args [ undefined, 'redis@0.6.7', [ 'redis@0.6.7', null ] ]
+verbose parsed url { pathname: 'redis@0.6.7',
+verbose parsed url   path: 'redis@0.6.7',
+verbose parsed url   href: 'redis@0.6.7' }
+silly cache add: name, spec, args [ 'redis', '0.6.7', [ 'redis', '0.6.7' ] ]
+verbose parsed url { pathname: '0.6.7', path: '0.6.7', href: '0.6.7' }
+info addNamed [ 'redis', '0.6.7' ]
+verbose addNamed [ '0.6.7', '0.6.7' ]
+verbose GET redis/0.6.7
+verbose raw, before any munging redis/0.6.7
+verbose url resolving [ 'https://registry.npmjs.org/', './redis/0.6.7' ]
+verbose url resolved https://registry.npmjs.org/redis/0.6.7
+verbose etag "1GDDRGGIK5CK1RRZVTTLFXCZC"
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"1GDDRGGIK5CK1RRZVTTLFXCZC"',
+silly get cb     date: 'Thu, 08 Dec 2011 15:48:28 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag redis/0.6.7 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0e-v83.6.6.8-linux-ia32-3.0.0-13-generic',
+verbose bin dist   { shasum: '0f17f913468a5cb2bf0864e4d56669d058668d46',
+verbose bin dist     tarball: 'http://registry.npmjs.org/redis/-/redis-0.6.7.tgz' } ]
+verbose caching /home/diversario/.npm/redis/0.6.7/package/package.json
+verbose loadDefaults redis@0.6.7
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"ECCD70BYEJVWXWFOFXG2LLGWD"',
+silly get cb     date: 'Thu, 08 Dec 2011 15:48:28 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag policyfile/0.0.4 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0e-v83.6.6.8-linux-ia32-3.0.0-13-generic',
+verbose bin dist   { shasum: 'd6b82ead98ae79ebe228e2daf5903311ec982e4d',
+verbose bin dist     tarball: 'http://registry.npmjs.org/policyfile/-/policyfile-0.0.4.tgz' } ]
+verbose caching /home/diversario/.npm/policyfile/0.0.4/package/package.json
+verbose loadDefaults policyfile@0.0.4
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"BFI2ZQ9CIB3BCNED2N3JP8NRG"',
+silly get cb     date: 'Thu, 08 Dec 2011 15:48:28 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag socket.io-client/0.8.7 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0e-v83.6.6.8-linux-ia32-3.0.0-13-generic',
+verbose bin dist   { shasum: '61c5953acbefebcd45dd47d0c8b1ad8a5bf86e1b',
+verbose bin dist     tarball: 'http://registry.npmjs.org/socket.io-client/-/socket.io-client-0.8.7.tgz' } ]
+verbose caching /home/diversario/.npm/socket.io-client/0.8.7/package/package.json
+verbose loadDefaults socket.io-client@0.8.7
+silly resolved [ { name: 'redis',
+silly resolved     version: '0.6.7',
+silly resolved     description: 'Redis client library',
+silly resolved     author: { name: 'Matt Ranney', email: 'mjr@ranney.com' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Rick Olson' },
+silly resolved        { name: 'Tim-Smart' },
+silly resolved        { name: 'TJ Holowaychuk' },
+silly resolved        { name: 'Orion Henry' },
+silly resolved        { name: 'Hank Sims' },
+silly resolved        { name: 'Aivo Paas' },
+silly resolved        { name: 'Paul Carey' },
+silly resolved        { name: 'Pieter Noordhuis' },
+silly resolved        { name: 'Andy Ray' },
+silly resolved        { name: 'Vladimir Dronnikov' },
+silly resolved        { name: 'Dave Hoover' } ],
+silly resolved     main: './index.js',
+silly resolved     scripts: { test: 'node ./test.js' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/mranney/node_redis.git' },
+silly resolved     _id: 'redis@0.6.7',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-alpha-2',
+silly resolved     _nodeVersion: 'v0.6.3',
+silly resolved     _defaultsLoaded: true },
+silly resolved   { name: 'policyfile',
+silly resolved     version: '0.0.4',
+silly resolved     author: { name: 'Arnout Kazemier' },
+silly resolved     description: 'Flash Socket Policy File Server. A server to respond to Flash Socket Policy requests, both inline and through a dedicated server instance.',
+silly resolved     main: 'index',
+silly resolved     keywords: 
+silly resolved      [ 'flash',
+silly resolved        'socket',
+silly resolved        'policy',
+silly resolved        'file',
+silly resolved        'server',
+silly resolved        'Flash Socket Policy File Server',
+silly resolved        'cross domain' ],
+silly resolved     directories: { lib: './lib' },
+silly resolved     maintainers: 
+silly resolved      [ { name: 'Arnout Kazemier',
+silly resolved          email: 'info@3rd-Eden.com',
+silly resolved          url: 'http://blog.3rd-Eden.com' } ],
+silly resolved     licenses: 
+silly resolved      [ { type: 'MIT',
+silly resolved          url: 'https://github.com/3rd-Eden/FlashPolicyFileServer/blob/master/LICENSE' } ],
+silly resolved     repositories: 
+silly resolved      [ { type: 'git',
+silly resolved          url: 'https://github.com/3rd-Eden/FlashPolicyFileServer.git' } ],
+silly resolved     _id: 'policyfile@0.0.4',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-alpha-2',
+silly resolved     _nodeVersion: 'v0.6.3',
+silly resolved     _defaultsLoaded: true,
+silly resolved     scripts: {} },
+silly resolved   { name: 'socket.io-client',
+silly resolved     description: 'Socket.IO client for the browser and node.js',
+silly resolved     version: '0.8.7',
+silly resolved     main: './lib/io.js',
+silly resolved     browserify: './dist/socket.io.js',
+silly resolved     homepage: 'http://socket.io',
+silly resolved     keywords: [ 'websocket', 'socket', 'realtime', 'socket.io', 'comet', 'ajax' ],
+silly resolved     author: { name: 'Guillermo Rauch', email: 'guillermo@learnboost.com' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Guillermo Rauch', email: 'rauchg@gmail.com' },
+silly resolved        { name: 'Arnout Kazemier', email: 'info@3rd-eden.com' },
+silly resolved        { name: 'Vladimir Dronnikov', email: 'dronnikov@gmail.com' },
+silly resolved        { name: 'Einar Otto Stangvik', email: 'einaros@gmail.com' } ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/LearnBoost/socket.io-client.git' },
+silly resolved     dependencies: 
+silly resolved      { 'uglify-js': '1.0.6',
+silly resolved        'websocket-client': '1.0.0',
+silly resolved        xmlhttprequest: '1.2.2' },
+silly resolved     devDependencies: 
+silly resolved      { expresso: '0.7.7',
+silly resolved        express: '2.3.11',
+silly resolved        jade: '0.12.1',
+silly resolved        stylus: '0.13.3',
+silly resolved        'socket.io': '0.8.7',
+silly resolved        'socket.io-client': '0.8.7' },
+silly resolved     engines: { node: '>= 0.4.0' },
+silly resolved     _id: 'socket.io-client@0.8.7',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-alpha-2',
+silly resolved     _nodeVersion: 'v0.6.3',
+silly resolved     _defaultsLoaded: true } ]
+info into /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io redis@0.6.7
+info into /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io policyfile@0.0.4
+info into /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io socket.io-client@0.8.7
+info installOne redis@0.6.7
+info installOne policyfile@0.0.4
+info installOne socket.io-client@0.8.7
+info unbuild /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis
+info unbuild /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile
+info unbuild /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/socket.io-client
+verbose from cache /home/diversario/.npm/redis/0.6.7/package/package.json
+verbose from cache /home/diversario/.npm/policyfile/0.0.4/package/package.json
+verbose from cache /home/diversario/.npm/socket.io-client/0.8.7/package/package.json
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules'
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules'
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules'
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm'
+verbose mkdir done: /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm 755
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm'
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___socket.io-client.npm'
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis
+silly gunzTarPerm modes [ '755', '644' ]
+verbose mkdir done: /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm 755
+verbose mkdir done: /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___socket.io-client.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/socket.io-client
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/Makefile
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/README.md
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/package.json
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/LICENSE
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/index.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/.gitignore
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/doc
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/doc/index.html
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/lib
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/lib/server.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/examples
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/examples/basic.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/examples/basic.fallback.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/tests
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/tests/unit.test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/tests/ssl
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/tests/ssl/ssl.crt
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package/tests/ssl/ssl.private.key
+silly chmod package 755
+silly chmod Makefile 644
+silly chmod README.md 644
+silly chmod package.json 644
+silly chmod LICENSE 644
+silly chmod index.js 644
+silly chmod .gitignore 644
+silly chmod doc 755
+silly chmod index.html 644
+silly chmod lib 755
+silly chmod server.js 644
+silly chmod examples 755
+silly chmod basic.js 644
+silly chmod basic.fallback.js 644
+silly chmod tests 755
+silly chmod unit.test.js 644
+silly chmod ssl 755
+silly chmod ssl.crt 644
+silly chmod ssl.private.key 644
+verbose gunzed /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package
+verbose rm'ed /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile
+verbose renamed [ '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___policyfile.npm/package',
+verbose renamed   '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile' ]
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile/package.json
+verbose loadDefaults policyfile@0.0.4
+info preinstall policyfile@0.0.4
+verbose from cache /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile/package.json
+verbose into /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile []
+silly resolved []
+verbose about to build /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile
+info build /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile
+verbose from cache /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/policyfile/package.json
+verbose linkStuff [ false,
+verbose linkStuff   false,
+verbose linkStuff   false,
+verbose linkStuff   '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules' ]
+info linkStuff policyfile@0.0.4
+verbose linkBins policyfile@0.0.4
+verbose linkMans policyfile@0.0.4
+verbose rebuildBundles policyfile@0.0.4
+info install policyfile@0.0.4
+info postinstall policyfile@0.0.4
+verbose installOne cb policyfile@0.0.4
+silly afterUntar undefined
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/changelog.md
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/README.md
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/eval_test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/package.json
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/simple_test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/generate_commands.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/multi_bench.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/index.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/auth.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/monitor.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/extend.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/unix_socket.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/mget.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/subqueries.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/simple.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/psubscribe.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/file.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/subquery.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/multi.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/pub_sub.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/web_server.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/backpressure_drain.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/examples/multi2.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/queue.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/to_array.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/commands.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/util.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/parser
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/parser/hiredis.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/lib/parser/javascript.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/reconnect_test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/sub_quit_test.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/buffer_bench.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/test_start_stop.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/codec.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/pubsub
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/pubsub/pub.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/pubsub/server.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/pubsub/run
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/speed
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/speed/00
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/speed/speed.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/speed/size-rate.png
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/speed/plot
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/rpushblpop
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/rpushblpop/pub.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/rpushblpop/server.js
+silly asyncMap in gTP /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package/tests/stress/rpushblpop/run
+silly chmod package 755
+silly chmod changelog.md 644
+silly chmod README.md 644
+silly chmod eval_test.js 644
+silly chmod test.js 644
+silly chmod package.json 644
+silly chmod simple_test.js 644
+silly chmod generate_commands.js 644
+silly chmod multi_bench.js 644
+silly chmod index.js 644
+silly chmod examples 755
+silly chmod auth.js 644
+silly chmod monitor.js 644
+silly chmod extend.js 644
+silly chmod unix_socket.js 644
+silly chmod mget.js 644
+silly chmod subqueries.js 644
+silly chmod simple.js 644
+silly chmod psubscribe.js 644
+silly chmod file.js 644
+silly chmod subquery.js 644
+silly chmod multi.js 644
+silly chmod pub_sub.js 644
+silly chmod web_server.js 644
+silly chmod backpressure_drain.js 644
+silly chmod multi2.js 644
+silly chmod lib 755
+silly chmod queue.js 644
+silly chmod to_array.js 644
+silly chmod commands.js 644
+silly chmod util.js 644
+silly chmod parser 755
+silly chmod hiredis.js 644
+silly chmod javascript.js 644
+silly chmod tests 755
+silly chmod reconnect_test.js 644
+silly chmod sub_quit_test.js 644
+silly chmod buffer_bench.js 644
+silly chmod test_start_stop.js 644
+silly chmod stress 755
+silly chmod codec.js 644
+silly chmod pubsub 755
+silly chmod pub.js 644
+silly chmod server.js 644
+silly chmod run 644
+silly chmod speed 755
+silly chmod 00 644
+silly chmod speed.js 644
+silly chmod size-rate.png 644
+silly chmod plot 644
+silly chmod rpushblpop 755
+silly chmod pub.js 644
+silly chmod server.js 644
+silly chmod run 644
+verbose gunzed /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package
+verbose rm'ed /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis
+verbose renamed [ '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/___redis.npm/package',
+verbose renamed   '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis' ]
+verbose caching /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis/package.json
+verbose loadDefaults redis@0.6.7
+info preinstall redis@0.6.7
+verbose from cache /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis/package.json
+verbose into /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis []
+silly resolved []
+verbose about to build /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis
+info build /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis
+verbose from cache /home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules/redis/package.json
+verbose linkStuff [ false,
+verbose linkStuff   false,
+verbose linkStuff   false,
+verbose linkStuff   '/home/diversario/Documents/Projects/glydrs/server/node_modules/socket.io/node_modules' ]
+info linkStuff redis@0.6.7
+verbose linkBins redis@0.6.7
+verbose linkMans redis@0.6.7
+verbose rebuildBundles redis@0.6.7
+info install redis@0.6.7
+info postinstall redis@0.6.7
+verbose installOne cb redis@0.6.7
+ERR! TypeError: Bad argument
+ERR!     at Object._open (fs.js:224:11)
+ERR!     at open (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:73:6)
+ERR!     at Object.open (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:67:3)
+ERR!     at Object.lutimes (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:28:6)
+ERR!     at setProps (/usr/local/lib/node_modules/npm/node_modules/fstream/lib/writer.js:267:18)
+ERR!     at Object.oncomplete (/usr/local/lib/node_modules/npm/node_modules/fstream/lib/writer.js:205:7)
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Linux 3.0.0-13-generic
+ERR! command "node" "/usr/local/bin/npm" "install" "socket.io"
+ERR! cwd /home/diversario/Documents/Projects/glydrs/server
+ERR! node -v v0.6.3
+ERR! npm -v 1.1.0-alpha-2
+ERR! message Bad argument
+verbose exit [ 1, true ]

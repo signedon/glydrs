@@ -129,7 +129,7 @@ app.get('/video/:vid', function(req, res){
     });
 
     console.log('Found streams:'.bold.grey, videos.length.toString().grey);
-
+    console.log('Streams:'.bold.grey, JSON.stringify(videos, null, '\t').grey);
     video = video.slice(4);
     video = video.slice(0, video.indexOf('&quality'));
 
@@ -157,7 +157,10 @@ app.get('/video/:vid', function(req, res){
     };
 
     var v_request = http.request(options, function(resp){
-      res.headers = resp.headers;
+      //res.headers = resp.headers;
+      _.each(resp.headers, function(value, key){
+        res.setHeader(key, value);
+      });
 
       res.connection.on('error', function(err){
         console.log('error:', err);
@@ -177,7 +180,11 @@ app.get('/video/:vid', function(req, res){
         return;
       });
 
+      /*resp.connection.on('data', function(chunk){
+        res.write(chunk);
+      });*/
       return resp.pipe(res);
+
 
     });
 
