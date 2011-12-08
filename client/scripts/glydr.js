@@ -18,10 +18,10 @@ var glydrs = function(){
 
   var tunnelRadius = 70;
   var tunnelLength = 30000;//Tuned for a 4 minute video
-  var tunnelSides = 6;
+  var tunnelSides = 15;
   var coloredBlocks = false;
   var videoWalls = false;
-  var distanceBetweenBlocks = 40;
+  var distanceBetweenBlocks = 200;
 
   if(jQuery('#coloredBlock:checked').length > 0){
     coloredBlocks = true;
@@ -157,8 +157,10 @@ var glydrs = function(){
         }else{
           startingPosition = 0;
         }
-        for(var j=0;j<20;j++){
-          map[ startingPosition + j ].getSceneObject().visible = true;
+        for(var j=0;j<30;j++){
+          if(map.length > startingPosition + j){
+            map[ startingPosition + j ].getSceneObject().visible = true;
+          }
         }
 
         if(playerPos[1] < highScores[i]){

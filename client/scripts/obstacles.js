@@ -7,18 +7,50 @@ var obstacles = {
     var distanceBetweenBlocks = options.distanceBetweenBlocks;
 
     var myTunnel = [];
+    var myTunnelRadius = tunnelRadius-10;
+
     for(var i=200;i<tunnelLength;i=i+distanceBetweenBlocks){
-      var myTunnelRadius = tunnelRadius-10;
+      var size = [tunnelRadius*1.3,10,tunnelRadius*1.3];
+      var location = [0,-i+(Math.random()-.5)*distanceBetweenBlocks/32,0];
+      var half = tunnelRadius/2;
+      var rand = Math.random();
+      if(rand < 1/3){
+        if(Math.random() < .5){
+          location[0] = half;
+        }else{
+          location[0] = -half;
+        }
+        size[0] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
+      }else if(rand < 2/3){
+        if(Math.random() < .5){
+          location[2] = half;
+        }else{
+          location[2] = -half;
+        }
+        size[2] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
+      }else{
+        if(Math.random()<.5){
+          location[0] = (Math.random()-.5)*tunnelRadius;
+          size[0] = tunnelRadius*2;
+          size[2] = size[2]-Math.random()*tunnelRadius;
+        }else{
+          location[2] = (Math.random()-.5)*tunnelRadius;
+          size[2] = tunnelRadius*2;
+          size[0] = size[0]-Math.random()*tunnelRadius;
+        }
+      }
+      
+
 
 //      var num = Math.round(Math.random()*2);
 //      var num1 = Math.round(Math.random()*2);
-
-      var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i,(Math.random()*myTunnelRadius*2)-myTunnelRadius];
+//      var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i,(Math.random()*myTunnelRadius*2)-myTunnelRadius];
       myTunnel.push({
         location:location,
-        size:[50,10,50]
+        size:size
       });
     }
+    
 
     var myObstacles = [];
     for(var i=0;i<myTunnel.length;i++){
