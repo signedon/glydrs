@@ -123,9 +123,14 @@ var glydrs = function(){
       socket.on('sucesshighscore', function(data) {
         if(data == true){
           $('.endNotification').text('You have the highest score ever!!!!!');
+          $('#playAgain').css('display','block');
         }else{
           $('.endNotification').text('You do not have the highest score out of everyone :(');
+          $('#playAgain').css('display','block');
         }
+      });
+      $('#playAgain').live('click',function(){
+        window.location = window.location;
       });
     };
 

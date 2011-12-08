@@ -42,14 +42,12 @@ io.configure(function(){
 
 io.sockets.on('connection', function (socket) {
   socket.on('kinectPos',function(data){
-    console.log(data);
     io.sockets.emit('updateMove', data);
   });
   socket.on('kinectReady',function(data){
     io.sockets.emit('kinectUser',data);
   });
   socket.on('highscore',function(data){
-    console.log('data',data)
     db.exists(function (err, exists) {
       if (err) {
         console.log('error', err);
@@ -57,13 +55,11 @@ io.sockets.on('connection', function (socket) {
         db.get(data.vidID,function(err,doc){
           if(err){
             db.save(data.vidID,data,function(err,res){
-              console.log('res',res);
               if(res.ok == true){
                 io.sockets.emit('sucesshighscore','true');
               }
             });
           }else{
-            console.log('doc',doc);
             if(doc.score <= data.score){
               io.sockets.emit('sucesshighscore','notHighscore');
             }else if(doc.score > data.score){
@@ -73,21 +69,19 @@ io.sockets.on('connection', function (socket) {
                 score : data.score,
                 vidID : doc.vidID
               };
-              console.log(newDoc);
               db.merge(data.vidID, newDoc, function (err, res) {
                 if(res.ok == true){
                   io.sockets.emit('sucesshighscore','true');
                 }else{
-                  console.log('not');
+                  console.log('error',err);
                 }
               });
             }
           }
         });
-      } else {
+      }else{
         db.create();
         db.save(data.vidID,data,function(err,res){
-          console.log('res',res);
           if(res.ok == true){
             io.sockets.emit('sucesshighscore','true');
           }
