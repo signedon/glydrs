@@ -17,11 +17,11 @@ var glydrs = function(){
   $(canvas).addClass('active');
 
   var tunnelRadius = 70;
-  var tunnelLength = 40000;//Tuned for a 4 minute video
+  var tunnelLength = 30000;//Tuned for a 4 minute video
   var tunnelSides = 6;
   var coloredBlocks = false;
   var videoWalls = false;
-  var distanceBetweenBlocks = 50;
+  var distanceBetweenBlocks = 40;
 
   if(jQuery('#coloredBlock:checked').length > 0){
     coloredBlocks = true;
@@ -147,12 +147,12 @@ var glydrs = function(){
         var playerPos = playerArray[i].getSceneObject().position.slice(0);
         var fov = 70 - Math.floor(( playerArray[i].getLinearVelocity()[1]/30)*6);
         var startingPosition = Math.round((playerPos[1]*-1)/distanceBetweenBlocks);
-        if(startingPosition > 5){
-          startingPosition-=5;
+        if(startingPosition > 10){
+          startingPosition-=10;
         }else{
           startingPosition = 0;
         }
-        for(var j=0;j<10;j++){
+        for(var j=0;j<20;j++){
           map[ startingPosition + j ].getSceneObject().visible = true;
         }
 

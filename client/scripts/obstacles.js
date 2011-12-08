@@ -110,7 +110,6 @@ var obstacles = {
         players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
-    box.visible = false;
 		scene.bind(box);
 
     var rigidBox = new CubicVR.RigidBody(box, {
