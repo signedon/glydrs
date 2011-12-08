@@ -33,7 +33,6 @@ jQuery(document).ready(function(){
   }
   window.addEventListener('keyup', function(event) {
     if(event.keyCode == 32){ //space
-      event.preventDefault();
       if( numKeyboards<2){
         numKeyboards++;
         getNewKeyboardControl();
@@ -155,14 +154,12 @@ jQuery(document).ready(function(){
 
     window.addEventListener('keydown', function(event) {
 			if( typeof keyMap[event.keyCode] != 'undefined'){
-        event.preventDefault();
         var keyMapping = keyMap[event.keyCode];
 				keyboardControlObj[keyMapping.type][keyMapping.label] = keyMapping.value;
 			}
 		}, false);
 		window.addEventListener('keyup', function(event) {
 			if( typeof keyMap[event.keyCode] != 'undefined'){
-        event.preventDefault();
         var keyMapping = keyMap[event.keyCode];
 				keyboardControlObj[keyMapping.type][keyMapping.label] = 0;
 			}

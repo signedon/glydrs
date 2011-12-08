@@ -11,24 +11,24 @@ var obstacles = {
 
     for(var i=200;i<tunnelLength;i=i+distanceBetweenBlocks){
       var size = [tunnelRadius*1.3,10,tunnelRadius*1.3];
-      var location = [0,-i+(Math.random()-.5)*distanceBetweenBlocks/32,0];
+      var location = [0,-i+(Math.random()-.5)*distanceBetweenBlocks/3,0];
       var half = tunnelRadius/2;
       var rand = Math.random();
-      if(rand < 1/3){
+      if(rand < 1/3){//Top Half
         if(Math.random() < .5){
           location[0] = half;
         }else{
           location[0] = -half;
         }
         size[0] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
-      }else if(rand < 2/3){
+      }else if(rand < 2/3){//Bottom Half
         if(Math.random() < .5){
           location[2] = half;
         }else{
           location[2] = -half;
         }
         size[2] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
-      }else{
+      }else{//Middle
         if(Math.random()<.5){
           location[0] = (Math.random()-.5)*tunnelRadius;
           size[0] = tunnelRadius*2;
@@ -40,8 +40,6 @@ var obstacles = {
         }
       }
       
-
-
 //      var num = Math.round(Math.random()*2);
 //      var num1 = Math.round(Math.random()*2);
 //      var location = [(Math.random()*myTunnelRadius*2)-myTunnelRadius,-i,(Math.random()*myTunnelRadius*2)-myTunnelRadius];
@@ -139,7 +137,7 @@ var obstacles = {
 		box.addEvent({
 			id: CubicVR.enums.event.CONTACT_GHOST,
 			action: function(event,handler){
-        players.killPlayer(event.event_properties.contacts[0]);
+//        players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
 		scene.bind(box);
@@ -149,8 +147,8 @@ var obstacles = {
       collision: {
         type: CubicVR.enums.collision.shape.BOX,
         size: box.scale
-      },
-      blocker:true
+      }
+//      blocker:true
     });
 		physics.bind(rigidBox);
 

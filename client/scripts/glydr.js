@@ -17,7 +17,7 @@ var glydrs = function(){
   $(canvas).addClass('active');
 
   var tunnelRadius = 70;
-  var tunnelLength = 30000;//Tuned for a 4 minute video
+  var tunnelLength = 50000;//Tuned for a 4 minute video
   var tunnelSides = 15;
   var coloredBlocks = false;
   var videoWalls = false;
