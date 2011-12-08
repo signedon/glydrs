@@ -45,10 +45,10 @@ var glydrs = function(){
   // Add our camera to the window resize list
   CubicVR.addResizeable(scene);
 
-
   for(var i=0;i<gamepads.length;i++){
     highScores.push(0);
-    playerArray.push(players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]));
+    var player = players.spawn(scene,physics,[0,0,10*playerArray.length],gamepads[i]);
+    playerArray.push(player);
     $('body').append('<div class="playerScore player'+i+'" style="left:'+canvas.width/gamepads.length*i+'px">0</div>');
   }
 
@@ -149,6 +149,7 @@ var glydrs = function(){
 
       for(var i=0;i<playerArray.length;i++){
         var playerPos = playerArray[i].getSceneObject().position.slice(0);
+
         var fov = 70 - Math.floor(( playerArray[i].getLinearVelocity()[1]/30)*6);
         var startingPosition = Math.round((playerPos[1]*-1)/distanceBetweenBlocks);
         if(startingPosition > 10){
