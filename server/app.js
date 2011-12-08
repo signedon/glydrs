@@ -57,7 +57,7 @@ io.sockets.on('connection', function (socket) {
           if(err){
             db.save(data.vidID,data,function(err,res){
               if(res.ok == true){
-                io.sockets.emit('sucesshighscore','true');
+                io.sockets.emit('sucesshighscore',{ isHighscore : 'true', player : data.player });
               }
             });
           }else{
@@ -85,7 +85,7 @@ io.sockets.on('connection', function (socket) {
         db.create();
         db.save(data.vidID,data,function(err,res){
           if(res.ok == true){
-            io.sockets.emit('sucesshighscore','true');
+            io.sockets.emit('sucesshighscore',{ isHighscore : 'true', player : data.player });
           }else{
             io.sockets.emit('sucesshighscore',{ isHighscore :'error', player : ''});
           }
