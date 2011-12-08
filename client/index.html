@@ -40,14 +40,14 @@
       <image xlink:href="resources/logo.svg" x="0" y="0" height="250px" width="350px"/>
     </svg>
     <h2>Press Start or Enter to begin.</h2>
+    <h3 class="playerDisplay"># of Players: <span class="playerCount">0</span></h3>
     Press a button to bind your controller. Press space to add keyboard players.
     <br><br>
-    A button or Shift for left player and control for right player. == Slow down, and gain control.
-    <br><br>
-    Keyboard Player 1: WASD<br>
-    Keyboard Player 2: Arrow Keys
-    <br><br>
-    <br><br>
+    Keyboard Player 1: WASD to move, Shift to slow down<br>
+    Keyboard Player 2: Arrow Keys to move, . to slow down<br>
+    Controller: Left Stick to Move, A button to slow down<br>
+    <br>
+    <h2>Options</h2>
     <input type="checkbox" id="coloredBlock"><label for="coloredBlock" checked="checked">Colored Blocks</label><br>
     <input type="checkbox" id="videoWalls"><label for="videoWalls">Video Walls (Performance Hit)</label>
     <br>
@@ -55,7 +55,6 @@
     <input type="text" id="videoID" onchange="jQuery('#gameVideo').attr('src','/video/'+jQuery('#videoID').val())">
   </div>
   <div class="notifications"></div>
-  <h3 class="playerDisplay"># of Players: <span class="playerCount">0</span></h3>
 
   <!--Nyan-->
   <!--<video id='gameVideo' src="/video/QH2-TGUlwu4"></video>-->
