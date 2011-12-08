@@ -181,8 +181,8 @@ var glydrs = function(){
         }
 
         scene.camera.setFOV(fov);
-        scene.camera.target = [playerPos[0],playerPos[1]-2,playerPos[2]];
-        scene.camera.position = [playerPos[0]+.1,playerPos[1],playerPos[2]];
+        scene.camera.target = [playerPos[0],playerPos[1]-4,playerPos[2]];
+        scene.camera.position = [playerPos[0]+.1,playerPos[1]-3,playerPos[2]];
         scene.camera.resize(canvas.width/playerArray.length, canvas.height);
         gl.viewport(canvas.width/playerArray.length*i,0,canvas.width/playerArray.length, canvas.height);
 

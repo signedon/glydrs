@@ -1,4 +1,5 @@
 var players = {
+//  defaultRotation:[90,90,0],
 	playerCount:0,
   killPlayer:function(player){
      player.reset();
@@ -8,39 +9,27 @@ var players = {
 		if(!location){
 			location = [0,0,0];
 		}
-		var material = new CubicVR.Material({
-			textures: {
-				color: "resources/2062-diffuse.jpg"
-			},
-			opacity:.5
-		});
-		var mesh = new CubicVR.Mesh({
-			primitive: {
-				type: "box",
-				size: 1.0,
-				material: material,
-				uvmapper: {
-					projectionMode: "cubic",
-					scale: [1, 1, 1]
-				}
-			},
-			compile: true
-		});
-    var sizeModifier = 3;
+
+    // load the collada file, specify path for images
+    var colladaScene = CubicVR.loadCollada("resources/skydiver/skydiver.dae",'');
+
+    // need to know it's name in the default scene
+    var mesh = colladaScene.getSceneObject("SkyDiver").obj;
+    
 		var box = new CubicVR.SceneObject({
 			mesh:mesh,
 			position:location,
-			scale:[1.3*sizeModifier,.5*sizeModifier,1*sizeModifier]
+			scale:[.8,.8,.8]
 		});
     box.setProperty('id',this.playerCount);
-		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
+//		box.getInstanceMaterials()[0].color = [Math.random(),Math.random(),Math.random()];
 
-
+    var modifier = 5;
 		var rigidBox = new CubicVR.RigidBody(box, {
 			type: 'dynamic',
 			collision: {
 				type: CubicVR.enums.collision.shape.BOX,
-				size: box.scale
+				size: [box.scale[0]*1.6*modifier,box.scale[1]*2.5*modifier,box.scale[2]*1.1*modifier]
 			}
 		});
 		rigidBox.activate();
@@ -80,7 +69,6 @@ var players = {
       player.applyForce([0,0,controls.axes.Left_Stick_X*-1*modifier],[0,0,0]);
     }
     //[forward/back, left/right,twist]
-
     player.setRotationEuler([(velocity[0]/maxVelocity)*-30,(velocity[2]/maxVelocity)*30,0]);
 
     if(Math.abs(Math.abs(velocity[1]) + terminalVelocity) > 4){
