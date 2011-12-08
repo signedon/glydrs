@@ -113,19 +113,31 @@ var glydrs = function(){
         var playerName = $('#username').val();
         var playerScore = $('#win span').text();
         var videoId = $('#videoID').val() || 'WeComeTogether';
-        var finalScore = {
-          player : playerName,
-          score  : playerScore,
-          vidID  : videoId
-        };
-        socket.emit('highscore', finalScore);
+        if(playerName == ''){
+          $('#username').val('Enter Your Name');
+        }else{
+          var finalScore = {
+            player : playerName,
+            score  : playerScore,
+            vidID  : videoId
+          };
+          socket.emit('highscore', finalScore);
+        }
+        
       });
       socket.on('sucesshighscore', function(data) {
-        if(data == true){
+        if(data.isHighscore == true){
           $('.endNotification').text('You have the highest score ever!!!!!');
+          $('#playAgain').css('display','block');
+        }else if(data.isHighscore == 'error'){
+          $('.endNotification').text('There was an error with the leaderboard. sorry...');
         }else{
-          $('.endNotification').text('You do not have the highest score out of everyone');
+          $('.endNotification').text('You do not have the highest score out of everyone :( This Person does ' + data.player );
+          $('#playAgain').css('display','block');
         }
+      });
+      $('#playAgain').live('click',function(){
+        window.location = window.location;
       });
     };
 
