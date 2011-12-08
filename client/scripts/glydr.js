@@ -124,7 +124,7 @@ var glydrs = function(){
         if(data == true){
           $('.endNotification').text('You have the highest score ever!!!!!');
         }else{
-          $('.endNotification').text('You do not have the highest score out of everyone');
+          $('.endNotification').text('You do not have the highest score out of everyone :(');
         }
       });
     };
