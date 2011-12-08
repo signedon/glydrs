@@ -85,8 +85,10 @@ canvas.active{
   display: none;
 }
 .endNotification{
-  margin:10px 0;
+  line-height: 20px;
+  margin:10px auto;
   text-align: center;
+  width: 450px;
 }
 #playAgain{
   display: none;

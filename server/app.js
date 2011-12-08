@@ -61,7 +61,7 @@ io.sockets.on('connection', function (socket) {
             });
           }else{
             if(doc.score <= data.score){
-              io.sockets.emit('sucesshighscore','notHighscore');
+              io.sockets.emit('sucesshighscore',{ isHighscore :'notHighscore', player : data.player});
             }else if(doc.score > data.score){
               var newDoc = {
                 _id : doc._id,
@@ -71,7 +71,7 @@ io.sockets.on('connection', function (socket) {
               };
               db.merge(data.vidID, newDoc, function (err, res) {
                 if(res.ok == true){
-                  io.sockets.emit('sucesshighscore','true');
+                  io.sockets.emit('sucesshighscore', { isHighscore : 'true', player : data.player });
                 }else{
                   console.log('error',err);
                 }
