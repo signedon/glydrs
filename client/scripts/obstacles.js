@@ -4,9 +4,10 @@ var obstacles = {
     var tunnelLength=options.tunnelLength;
     var videoTexture=options.videoTexture;
     var coloredBlocks=options.coloredBlocks;
+    var distanceBetweenBlocks = options.distanceBetweenBlocks;
 
     var myTunnel = [];
-    for(var i=200;i<tunnelLength;i=i+100){
+    for(var i=200;i<tunnelLength;i=i+distanceBetweenBlocks){
       var myTunnelRadius = tunnelRadius-10;
 
 //      var num = Math.round(Math.random()*2);
@@ -19,9 +20,9 @@ var obstacles = {
       });
     }
 
-    var myObstacles = {};
+    var myObstacles = [];
     for(var i=0;i<myTunnel.length;i++){
-      myObstacles[location[1]]= obstacles.spawn(scene,physics,{
+      myObstacles[i] = obstacles.spawn(scene,physics,{
         videoTexture:videoTexture,
         coloredBlocks:coloredBlocks,
         position:myTunnel[i].location,
@@ -109,7 +110,7 @@ var obstacles = {
         players.killPlayer(event.event_properties.contacts[0]);
 			}
 		});
-
+    box.visible = false;
 		scene.bind(box);
 
     var rigidBox = new CubicVR.RigidBody(box, {

@@ -17,10 +17,12 @@ var glydrs = function(){
   $(canvas).addClass('active');
 
   var tunnelRadius = 70;
-  var tunnelLength = 23700;//Tuned for a 4 minute video
+  var tunnelLength = 40000;//Tuned for a 4 minute video
   var tunnelSides = 6;
   var coloredBlocks = false;
   var videoWalls = false;
+  var distanceBetweenBlocks = 50;
+
   if(jQuery('#coloredBlock:checked').length > 0){
     coloredBlocks = true;
   }
@@ -77,7 +79,8 @@ var glydrs = function(){
     tunnelRadius:tunnelRadius,
     tunnelLength:tunnelLength,
     videoTexture:videoTexture,
-    coloredBlocks:coloredBlocks
+    coloredBlocks:coloredBlocks,
+    distanceBetweenBlocks:distanceBetweenBlocks
   });
 
   //endgame func
@@ -136,10 +139,22 @@ var glydrs = function(){
 //        lastChange = partOfSecond;
         tube.changeColor();
       }
+      for(var j=0;j<map.length;j++){
+        map[  j ].getSceneObject().visible = false;
+      }
 
       for(var i=0;i<playerArray.length;i++){
         var playerPos = playerArray[i].getSceneObject().position.slice(0);
         var fov = 70 - Math.floor(( playerArray[i].getLinearVelocity()[1]/30)*6);
+        var startingPosition = Math.round((playerPos[1]*-1)/distanceBetweenBlocks);
+        if(startingPosition > 5){
+          startingPosition-=5;
+        }else{
+          startingPosition = 0;
+        }
+        for(var j=0;j<10;j++){
+          map[ startingPosition + j ].getSceneObject().visible = true;
+        }
 
         if(playerPos[1] < highScores[i]){
           highScores[i] = playerPos[1];
