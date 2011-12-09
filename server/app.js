@@ -193,4 +193,9 @@ app.get('/video/:vid', function(req, res){
 });
 
 
+app.get('/restart', function(req, res){
+  process.exit(8);
+});
+
+
 app.listen(80,'0.0.0.0');

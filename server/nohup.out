@@ -1,0 +1,1092 @@
+DEBUG: Running node-supervisor with
+
+DEBUG:   program 'app.js'
+DEBUG:   --watch '.'
+DEBUG:   --extensions 'node|js'
+DEBUG:   --exec 'node'
+DEBUG: Starting child process with 'node app.js'
+DEBUG: Watching directory '/home/ilya/glydrs/server/.' for changes.
+
+   [36minfo  -[39m socket.io started
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+   [33mwarn  -[39m websocket connection invalid
+[32m[1mRequesting video ID[22m[39m [32m[1mmayasolovey[22m[39m
+[90m[1mFound streams:[22m[39m [90m0[39m
+[90m[1mRequesting stream[22m[39m [90mfine[39m
+errrrrrrrrrrrrr { stack: [Getter/Setter],
+  arguments: [ 0, null ],
+  type: 'non_object_property_load',
+  message: [Getter/Setter] }
+[32m[1mRequesting video ID[22m[39m [32m[1mmayasolovey[22m[39m
+[90m[1mFound streams:[22m[39m [90m0[39m
+[90m[1mRequesting stream[22m[39m [90mfine[39m
+errrrrrrrrrrrrr { stack: [Getter/Setter],
+  arguments: [ 0, null ],
+  type: 'non_object_property_load',
+  message: [Getter/Setter] }
+   [33mwarn  -[39m client not handshaken client should reconnect
+   [33mwarn  -[39m client not handshaken client should reconnect
+[32m[1mRequesting video ID[22m[39m [32m[1mbhRwTnM1gZc[22m[39m
+[90m[1mFound streams:[22m[39m [90m6[39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v12.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905263&itag=44&ip=173.0.0.0&signature=75C390299857F32E05417DEFDBAD706313EB278A.4E1F9A90207F5A4B794C6138D9D64C11C5D69360&sver=3&ratebypass=yes&source=youtube&expire=1323330426&key=yt1&ipbits=8&cp=U0hRSFNOTl9HUENOMV9LSFJFOnp0ZkV2X3VfQ19T&id=6e14704e73358197[39m
+[32m[1mRequesting video ID[22m[39m [32m[1mbhRwTnM1gZc[22m[39m
+[90m[1mFound streams:[22m[39m [90m6[39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v12.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909515%2C914051%2C911612%2C910206&itag=44&ip=173.0.0.0&signature=4B53CD27898B6A12AC96460A9DEA0A2B6DCE55B2.C1AD1841943472952A80C7C1EE0440733FA1BE2A&sver=3&ratebypass=yes&source=youtube&expire=1323330426&key=yt1&ipbits=8&cp=U0hRSFNOTl9HUENOMV9LSFJFOkoweVlwYUhEdERD&id=6e14704e73358197[39m
+CLIENT ABORTED
+CLIENT ABORTED
+[32m[1mRequesting video ID[22m[39m [32m[1mCJQU22Ttpwc[22m[39m
+[90m[1mFound streams:[22m[39m [90m8[39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v23.lscache4.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907612%2C914036%2C910104&itag=45&ip=173.0.0.0&signature=50A28E5F4AC70276AADE47491CA7D8B96F6565C7.9E36959D0EB9930F9E4F2F0278F5C6679F7E4F70&sver=3&ratebypass=yes&source=youtube&expire=1323331677&key=yt1&ipbits=8&cp=U0hRSFNOT19MUUNOMV9LSFNHOjNsNm93VElycmpM&id=089414db64eda707[39m
+[32m[1mRequesting video ID[22m[39m [32m[1mCJQU22Ttpwc[22m[39m
+[90m[1mFound streams:[22m[39m [90m8[39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v23.lscache4.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=919201&itag=45&ip=173.0.0.0&signature=37B438094B77CE73045AE516524706CF4E14C560.C1D10D5C83EC60A66778A11DB1DE63EF60DBB89D&sver=3&ratebypass=yes&source=youtube&expire=1323331677&key=yt1&ipbits=8&cp=U0hRSFNOT19MUUNOMV9LSFNHOk91Z1hSSncySnZM&id=089414db64eda707[39m
+END
+END
+CLIENT ABORTED
+CLIENT ABORTED
+[32m[1mRequesting video ID[22m[39m [32m[1m-85pQtysILk[22m[39m
+[90m[1mFound streams:[22m[39m [90m4[39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v10.lscache6.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=906719%2C914017%2C908428&itag=43&ip=173.0.0.0&signature=A1F6BE11DC777F264E8A07FFE5FBD5CA5BA0BCCC.29AFE8EDD96BD5E9ED26EA44EAFE0116147B510E&sver=3&ratebypass=yes&source=youtube&expire=1323383293&key=yt1&ipbits=8&cp=U0hRSFNTUV9OTUNOMV9LTVVDOkZJcnlkX3JTTWJE&id=fbce6942dcac20b9[39m
+DEBUG: Running node-supervisor with
+
+DEBUG:   program 'app.js'
+DEBUG:   --watch '.'
+DEBUG:   --extensions 'node|js'
+DEBUG:   --exec 'node'
+DEBUG: Starting child process with 'node app.js'
+DEBUG: Watching directory '/home/ilya/glydrs/server/.' for changes.
+
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1m-EJFajX793U[22m[39m
+[90m[1mFound streams:[22m[39m [90m4[39m
+[90m[1mStreams:[22m[39m [90m[
+	"url=http://o-o.preferred.ord12s01.v23.lscache7.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907003%2C905241%2C913100&itag=43&ip=173.0.0.0&signature=3562B2EC6D4211BA3529E12EE4FACA6F60306F94.4729119E30B8BB24369080EFCE70C41710FED383&sver=3&ratebypass=yes&source=youtube&expire=1323392279&key=yt1&ipbits=8&cp=U0hRSFNUUF9MU0NOMV9LTlRDOnBOZ3p3X3Z6UTJo&id=f842456a35fbf775&quality=medium&fallback_host=tc.v23.cache7.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v24.lscache6.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=907003%2C905241%2C913100&algorithm=throttle-factor&itag=34&ip=173.0.0.0&burst=40&sver=3&signature=A458ACEC16A6331B7D296E3739E4633438EBE85B.C72C23371AD7416A437001D035A8E27E8416845D&source=youtube&expire=1323392279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFNUUF9MU0NOMV9LTlRDOnBOZ3p3X3Z6UTJo&id=f842456a35fbf775&quality=medium&fallback_host=tc.v24.cache6.c.youtube.com&type=video/x-flv&itag=34",
+	"url=http://o-o.preferred.ord12s01.v11.lscache7.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907003%2C905241%2C913100&itag=18&ip=173.0.0.0&signature=1528441067E79155DC53690A9BFB7C5EE05D00CC.D10E4CC4364202F459E84F6B17CDB5ADB3B1F25C&sver=3&ratebypass=yes&source=youtube&expire=1323392279&key=yt1&ipbits=8&cp=U0hRSFNUUF9MU0NOMV9LTlRDOnBOZ3p3X3Z6UTJo&id=f842456a35fbf775&quality=medium&fallback_host=tc.v11.cache7.c.youtube.com&type=video/mp4;+codecs=\"avc1.42001E",
+	"url=http://o-o.preferred.ord12s01.v1.lscache6.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=907003%2C905241%2C913100&algorithm=throttle-factor&itag=5&ip=173.0.0.0&burst=40&sver=3&signature=8514C5DE16402166A0BE90330563BAD45649754C.3F215708990BF2BD5A5A3BB586F1D3C2008C3662&source=youtube&expire=1323392279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFNUUF9MU0NOMV9LTlRDOnBOZ3p3X3Z6UTJo&id=f842456a35fbf775&quality=small&fallback_host=tc.v1.cache6.c.youtube.com&type=video/x-flv&itag=5"
+][39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v23.lscache7.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907003%2C905241%2C913100&itag=43&ip=173.0.0.0&signature=3562B2EC6D4211BA3529E12EE4FACA6F60306F94.4729119E30B8BB24369080EFCE70C41710FED383&sver=3&ratebypass=yes&source=youtube&expire=1323392279&key=yt1&ipbits=8&cp=U0hRSFNUUF9MU0NOMV9LTlRDOnBOZ3p3X3Z6UTJo&id=f842456a35fbf775[39m
+CLIENT ABORTED
+error { stack: [Getter/Setter],
+  arguments: undefined,
+  type: undefined,
+  message: 'ECONNREFUSED, Connection refused',
+  errno: 111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect' }
+[33mwarn[39m:   Could not read .foreverignore file.
+info: socket.io started
+warn: websocket connection invalid
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: websocket connection invalid
+warn: websocket connection invalid
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 1 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 2 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 3 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 4 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 5 time
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 6 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 7 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 8 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+warn: client not handshaken client should reconnect
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 9 time
+info: socket.io started
+warn: websocket connection invalid
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 10 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 11 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 12 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 13 time
+info: socket.io started
+warn: websocket connection invalid
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 14 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 15 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 16 time
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 17 time
+info: socket.io started
+warn: client not handshaken client should reconnect
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 18 time
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/app.js changed
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 19 time
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 20 time
+info: socket.io started
+[33mwarn[39m:   Could not read .foreverignore file.
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 1 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1msiOHh0uzcuY[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 2 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1msiOHh0uzcuY[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 3 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 4 time
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 5 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 6 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+[90m[1mFound streams:[22m[39m [90m10[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+[90m[1mStreams:[22m[39m [90m[
+	"url=http://o-o.preferred.ord12s01.v14.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=46&ip=173.0.0.0&signature=5324DF1BDF17FD04FF20426847804988F4C7C0D4.3F6FF1817102F0D19E2CE7EB90C35F21460E7837&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=hd1080&fallback_host=tc.v14.cache3.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v16.lscache4.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=37&ip=173.0.0.0&signature=543182FEDF1EF6E2FA9FD1638905C205AD0CC084.64030D79ABFFD5016CB7FC4F656EBC125B6E65B5&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=hd1080&fallback_host=tc.v16.cache4.c.youtube.com&type=video/mp4;+codecs=\"avc1.64001F",
+	"url=http://o-o.preferred.ord12s01.v14.lscache1.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=45&ip=173.0.0.0&signature=174E3F9E1CDF74035AB81AD38CA06D4FFAF67F69.475FC2C559E09F32DBFA846AF9BB7D5A1A6C0BE8&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=hd720&fallback_host=tc.v14.cache1.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v19.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=22&ip=173.0.0.0&signature=7A2398ACEAF0639E243CF6429BCFC0DC24DD1EB4.8936C8A5D06D5FDF73EF331F7A07C0E7826CF1A0&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=hd720&fallback_host=tc.v19.cache3.c.youtube.com&type=video/mp4;+codecs=\"avc1.64001F",
+	"url=http://o-o.preferred.ord12s01.v2.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=44&ip=173.0.0.0&signature=24D50585CCD4BAF423C18B4149899AF8E3116F27.67C14B7DCA5F2FEF486E42B42EDCAB16265F8D64&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=large&fallback_host=tc.v2.cache8.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v17.lscache5.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=905261&algorithm=throttle-factor&itag=35&ip=173.0.0.0&burst=40&sver=3&signature=464F3CA62685E90C4B34332FE9EF56B35E209585.8EF2B2C64C4BC625C2563ADA1482E172EB37F835&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=large&fallback_host=tc.v17.cache5.c.youtube.com&type=video/x-flv&itag=35",
+	"url=http://o-o.preferred.ord12s01.v19.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=43&ip=173.0.0.0&signature=7A968788DC98C1252871D5419200A003CC9CCB41.B881626F6C0A28B7D46B2C0F2376EAEBA086C216&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v19.cache3.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v24.lscache7.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=905261&algorithm=throttle-factor&itag=34&ip=173.0.0.0&burst=40&sver=3&signature=A0265E5A74022283F4A196042A98E00D57347D79.C2D1A62630A2B27711607F4C74AC079B141CF29B&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v24.cache7.c.youtube.com&type=video/x-flv&itag=34",
+	"url=http://o-o.preferred.ord12s01.v3.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=18&ip=173.0.0.0&signature=6CD32EF3D744216086484F5462C3E6902086DE93.B02BB02629AD38DE077A9EF6F2D70C53513668BC&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v3.cache3.c.youtube.com&type=video/mp4;+codecs=\"avc1.42001E",
+	"url=http://o-o.preferred.ord12s01.v8.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=905261&algorithm=throttle-factor&itag=5&ip=173.0.0.0&burst=40&sver=3&signature=198DDD0FDA8262E97FCD486B0D4FE309F70D76EF.0A4AC42589A0C10DA07168B8F9634F2A61FA1BE3&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc&quality=small&fallback_host=tc.v8.cache8.c.youtube.com&type=video/x-flv&itag=5"
+][39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v14.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=905261&itag=46&ip=173.0.0.0&signature=5324DF1BDF17FD04FF20426847804988F4C7C0D4.3F6FF1817102F0D19E2CE7EB90C35F21460E7837&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOjJZbVhEWVRSWGNs&id=ab26d416763b63cc[39m
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 7 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 8 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 9 time
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 10 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 11 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 12 time
+info: socket.io started
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 13 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+[90m[1mFound streams:[22m[39m [90m10[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+[90m[1mStreams:[22m[39m [90m[
+	"url=http://o-o.preferred.ord12s01.v14.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=46&ip=173.0.0.0&signature=9B26796ACC59F4967112A15B5EF0D4E9BDE2FD2F.B5BBFB754BB82FD730B7E0CB7E1BFA96B66E5093&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=hd1080&fallback_host=tc.v14.cache3.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v16.lscache4.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=37&ip=173.0.0.0&signature=8185C6F2C8170DC776BAB38C3D796072DF1745F6.8671327AB4857B45B48372CB6C322C9D075AF81C&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=hd1080&fallback_host=tc.v16.cache4.c.youtube.com&type=video/mp4;+codecs=\"avc1.64001F",
+	"url=http://o-o.preferred.ord12s01.v14.lscache1.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=45&ip=173.0.0.0&signature=3DB92B779D01D0362DBFEC5E40E36DC41652F588.87B65E06886E1EE9DBC3CD089C642EF1B1F470A6&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=hd720&fallback_host=tc.v14.cache1.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v19.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=22&ip=173.0.0.0&signature=68F64CF36F35F0268397BBE7F282390A11841ADD.4B631B90904F7A33FDA780453068BA4E6BC5B16B&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=hd720&fallback_host=tc.v19.cache3.c.youtube.com&type=video/mp4;+codecs=\"avc1.64001F",
+	"url=http://o-o.preferred.ord12s01.v2.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=44&ip=173.0.0.0&signature=837D2CBE3CA172BA58AF7C2340AFC7E4728457C7.A2C9111C2B1039B6B36EC94BA0A4A950F90DFAFE&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=large&fallback_host=tc.v2.cache8.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v17.lscache5.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=909328&algorithm=throttle-factor&itag=35&ip=173.0.0.0&burst=40&sver=3&signature=6951307E749D377163485A4B6A4BA2AB2EAC4074.72F0A2E156CD8732AFA6F9AA9C0AA1EF009AADC8&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=large&fallback_host=tc.v17.cache5.c.youtube.com&type=video/x-flv&itag=35",
+	"url=http://o-o.preferred.ord12s01.v19.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=43&ip=173.0.0.0&signature=644EC02762D5E36CC48924073F24FA81E895FA58.07EAF9B0963F5C8FE12D9A628EFD26B0E6C5448B&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v19.cache3.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v24.lscache7.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=909328&algorithm=throttle-factor&itag=34&ip=173.0.0.0&burst=40&sver=3&signature=3B3EFFEC640E8D2E26EDDF36FED949FFFE13C9A9.A175C0F0C96F8E81E0FBE6D8FB030C0995BD67B2&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v24.cache7.c.youtube.com&type=video/x-flv&itag=34",
+	"url=http://o-o.preferred.ord12s01.v3.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=18&ip=173.0.0.0&signature=54B409A4071320D10F9BD60469681AD6D54022BC.29FCB1F56E8CAD5F623DF782CA36156DCAA0AE41&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v3.cache3.c.youtube.com&type=video/mp4;+codecs=\"avc1.42001E",
+	"url=http://o-o.preferred.ord12s01.v8.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=909328&algorithm=throttle-factor&itag=5&ip=173.0.0.0&burst=40&sver=3&signature=CB9F816AFE50B92080CDF0E90E6C9ED62544D966.8663E24E3007A55617949D6DC73895E931B7CC4F&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc&quality=small&fallback_host=tc.v8.cache8.c.youtube.com&type=video/x-flv&itag=5"
+][39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v14.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=909328&itag=46&ip=173.0.0.0&signature=9B26796ACC59F4967112A15B5EF0D4E9BDE2FD2F.B5BBFB754BB82FD730B7E0CB7E1BFA96B66E5093&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnplY0Y5RGUyN2dO&id=ab26d416763b63cc[39m
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 14 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 15 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+[90m[1mFound streams:[22m[39m [90m10[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+[90m[1mStreams:[22m[39m [90m[
+	"url=http://o-o.preferred.ord12s01.v14.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=46&ip=173.0.0.0&signature=A840199BF1D429FA8D48A9359F2B4589036B9EAB.C1CABFAE030B863C84E923D8FBEA9172AD06DA02&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=hd1080&fallback_host=tc.v14.cache3.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v16.lscache4.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=37&ip=173.0.0.0&signature=A3D526091A0E0C57C0CE0CA995FE163ACB7260BF.39DBE1A539FA7CB4E7523BBC5B3B2584A5C1CA68&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=hd1080&fallback_host=tc.v16.cache4.c.youtube.com&type=video/mp4;+codecs=\"avc1.64001F",
+	"url=http://o-o.preferred.ord12s01.v14.lscache1.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=45&ip=173.0.0.0&signature=498CE09FF4FD5DF88000285DD827B6B9CA21BFA0.D632690548D62BDBE036B9835A157AB52BF7E5A1&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=hd720&fallback_host=tc.v14.cache1.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v19.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=22&ip=173.0.0.0&signature=9874A7FC6E6C241F583E25B1CBE4A7113E69936A.0259F06E14CCC53D03533B4552FC395ABBB787EF&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=hd720&fallback_host=tc.v19.cache3.c.youtube.com&type=video/mp4;+codecs=\"avc1.64001F",
+	"url=http://o-o.preferred.ord12s01.v2.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=44&ip=173.0.0.0&signature=BBFABC64DBDDBE1B7D71A4B20B66614B8F4D1F8E.071F1F2F4C2F508643B344F83086F95D72C6C5DA&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=large&fallback_host=tc.v2.cache8.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v17.lscache5.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=907518%2C914501%2C910207%2C914102&algorithm=throttle-factor&itag=35&ip=173.0.0.0&burst=40&sver=3&signature=5529FF682FBDEC3CA2045568D1042BB159C81014.A08765241CF7AAEB9EBA5294224560B3D5080E36&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=large&fallback_host=tc.v17.cache5.c.youtube.com&type=video/x-flv&itag=35",
+	"url=http://o-o.preferred.ord12s01.v19.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=43&ip=173.0.0.0&signature=84457582036CB975D2D9C4E2CB673CE1DA62D0B8.B3EA456FE26AACF8EEE17768764F9B58D1570A45&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v19.cache3.c.youtube.com&type=video/webm;+codecs=\"vp8.0",
+	"url=http://o-o.preferred.ord12s01.v24.lscache7.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=907518%2C914501%2C910207%2C914102&algorithm=throttle-factor&itag=34&ip=173.0.0.0&burst=40&sver=3&signature=9F8D1E31BEA04EEE601F1E3258D0AD0DD65947BB.0760B90DCAA632320B7A1B865D8F521CC26C41CE&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v24.cache7.c.youtube.com&type=video/x-flv&itag=34",
+	"url=http://o-o.preferred.ord12s01.v3.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=18&ip=173.0.0.0&signature=42BACA60F7C87CF77AF3475DF06C43C0EF9FE872.6E8A27AA348F0E0B7BB47F0CF3BA1372EA9D7677&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=medium&fallback_host=tc.v3.cache3.c.youtube.com&type=video/mp4;+codecs=\"avc1.42001E",
+	"url=http://o-o.preferred.ord12s01.v8.lscache8.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Calgorithm%2Cburst%2Cfactor%2Ccp&fexp=907518%2C914501%2C910207%2C914102&algorithm=throttle-factor&itag=5&ip=173.0.0.0&burst=40&sver=3&signature=5CE6951824F6F4D94E0744DE2E5EAD726BC2CFDE.86E1AD94826FAC48D8CD4A186C55450B46119327&source=youtube&expire=1323467279&key=yt1&ipbits=8&factor=1.25&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc&quality=small&fallback_host=tc.v8.cache8.c.youtube.com&type=video/x-flv&itag=5"
+][39m
+[90m[1mRequesting stream[22m[39m [90mhttp://o-o.preferred.ord12s01.v14.lscache3.c.youtube.com/videoplayback?sparams=id%2Cexpire%2Cip%2Cipbits%2Citag%2Csource%2Cratebypass%2Ccp&fexp=907518%2C914501%2C910207%2C914102&itag=46&ip=173.0.0.0&signature=A840199BF1D429FA8D48A9359F2B4589036B9EAB.C1CABFAE030B863C84E923D8FBEA9172AD06DA02&sver=3&ratebypass=yes&source=youtube&expire=1323467279&key=yt1&ipbits=8&cp=U0hRSFRRVV9MU0NOMV9MS1lDOnJMcGJMOS1ucWVS&id=ab26d416763b63cc[39m
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 16 time
+info: socket.io started
+[32m[1mRequesting video ID[22m[39m [32m[1mqybUFnY7Y8w[22m[39m
+info: restaring script because /home/ilya/glydrs/server/nohup.out changed
+warn: Forever detected script exited with code: null
+warn: Forever restarting script for 17 time
+info: socket.io started
