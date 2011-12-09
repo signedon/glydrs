@@ -73,6 +73,7 @@ var tube = {
       collision: tubeCollision,
       blocker:true
     });
+
     
     //Bind them to the scene
     scene.bind(tubeWall);

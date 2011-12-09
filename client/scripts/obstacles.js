@@ -20,14 +20,15 @@ var obstacles = {
         }else{
           location[0] = -half;
         }
-        size[0] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
+        size[0] = tunnelRadius*2+10;
       }else if(rand < 2/3){//Bottom Half
         if(Math.random() < .5){
           location[2] = half;
         }else{
           location[2] = -half;
         }
-        size[2] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
+        size[2] = tunnelRadius*2+10;
+//        size[2] = tunnelRadius*2+((Math.random()-.5)*tunnelRadius/3);
       }else{//Middle
         if(Math.random()<.5){
           location[0] = (Math.random()-.5)*tunnelRadius;
