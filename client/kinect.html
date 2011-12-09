@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Kinect for weglydrs</title>
-  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <!--<script src="http://www.google.com/jsapi" type="text/javascript"></script>-->
   <script src="/socket.io/socket.io.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script src="scripts/thirdParty/jquery-1.7.min.js"></script>
 
   <script src="scripts/thirdParty/depth.js"></script>
   <script>
@@ -64,10 +64,27 @@
         $("#onz").text("z: " + z);
 
         //update for percentage based data
-        kinectData['axes']['Left_Stick_X'] = ( x / 50 - 1);
-        kinectData['axes']['Left_Stick_Y'] = ( y / 50 - 1);
+        var myX = 0;
+        if(x<25){
+          myX = -1;
+        }else if(x>75){
+          myX = 1;
+        }else{
+          myX = ( x / 50 - 1 ) ;
+        }
+        var myY = 0;
+        y-=25;
+        if(y<25){
+          myY = -1;
+        }else if(y>75){
+          myY = 1;
+        }else{
+          myY = ( y / 50 - 1 ) ;
+        }
+        kinectData['axes']['Left_Stick_X'] = ( myX * -1);
+        kinectData['axes']['Left_Stick_Y'] = ( myY );
 
-        if( z < 80 ){
+        if( z < 85 ){
           kinectData['buttons']['A_Button'] = 1;
           $('#zbutton').text('a button triggered');
         }else{
