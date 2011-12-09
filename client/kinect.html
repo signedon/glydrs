@@ -67,10 +67,12 @@
         kinectData['axes']['Left_Stick_X'] = ( x / 50 - 1);
         kinectData['axes']['Left_Stick_Y'] = ( y / 50 - 1);
 
-        if( z < 50 ){
+        if( z < 80 ){
           kinectData['buttons']['A_Button'] = 1;
+          $('#zbutton').text('a button triggered');
         }else{
-          kinectData['buttons']['Start_Button'] = 1;
+          kinectData['buttons']['A_Button'] = 0;
+          $('#zbutton').text('a button un-triggered');
         }
         console.log('onmove',kinectData);
         
@@ -83,6 +85,7 @@
 <body>
 <div id="status">No Kinect / DepthJS detected</div>
 <div id="registration"></div>
+<div id="zbutton"></div>
 
 <div id="onmove">
   <div id="onx"></div>
