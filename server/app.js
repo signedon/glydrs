@@ -61,7 +61,7 @@ io.sockets.on('connection', function (socket) {
               }
             });
           }else{
-            if(doc.score >= data.score){
+            if(doc.score <= data.score){
               io.sockets.emit('sucesshighscore',{ isHighscore :'notHighscore', player : data.player});
             }else{
               var newDoc = {

@@ -187,6 +187,7 @@ jQuery(document).ready(function(){
     if(!gamePlaying){
       gamePlaying = true;
       jQuery('.instructions').hide();
+      jQuery('.sologo').hide();
       jQuery('.notifications').html("Starting game with "+gamepads.length+" players.");
       jQuery('.playerDisplay').html('');
       setTimeout('glydrs()',100);

@@ -64,7 +64,7 @@
         $("#onz").text("z: " + z);
 
         //update for percentage based data
-        var myX = 0;
+        /*var myX = 0;
         if(x<25){
           myX = -1;
         }else if(x>75){
@@ -80,9 +80,9 @@
           myY = 1;
         }else{
           myY = ( y / 50 - 1 ) ;
-        }
-        kinectData['axes']['Left_Stick_X'] = ( myX * -1);
-        kinectData['axes']['Left_Stick_Y'] = ( myY );
+        }*/
+        kinectData['axes']['Left_Stick_X'] = ( (x-50) / 30 );
+        kinectData['axes']['Left_Stick_Y'] = ( (y-50) / 30 );
 
         if( z < 85 ){
           kinectData['buttons']['A_Button'] = 1;
@@ -91,7 +91,7 @@
           kinectData['buttons']['A_Button'] = 0;
           $('#zbutton').text('a button un-triggered');
         }
-        console.log('onmove',kinectData);
+        console.log('onmove',kinectData.axes.Left_Stick_X);
         
         socket.emit('kinectPos', kinectData);
 

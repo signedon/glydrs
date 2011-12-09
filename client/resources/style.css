@@ -2,6 +2,7 @@
 .instructions{
   font-family: 'Aldrich', sans-serif;
   margin: 0 auto;
+  position: relative;
   text-align: center;
   width: 770px;
 }
@@ -94,4 +95,15 @@ canvas.active{
   display: none;
   margin: 0 auto;
   width: 72px;
+}
+.sologo{
+  margin: 20px auto 0;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 200px;
+}
+.endlogo{
+  margin: 20px auto 0;
+  width: 200px;
 }
