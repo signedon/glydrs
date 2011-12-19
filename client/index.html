@@ -67,7 +67,7 @@
   <!--We Come Together - Goldfish-->
    <video id='gameVideo' src="/resources/WeComeTogether.webm" preload="auto" width="480" height="360" style="display:none" ></video>
 
-   <img src="resources/signedon-logo.png" class="sologo" />
+   <a href="http://signedon.com" class="sologo"><img src="resources/signedon-logo.png"  /></a>
    <!--End Game Screen-->
   <div id="endGame">
     <h1>High Scores</h1>
@@ -81,7 +81,7 @@
     </form>
     <div class="endNotification"></div>
     <button id="playAgain">Play Again</button>
-    <img src="resources/signedon-logo.png" class="endlogo" />
+    <a href="http://signedon.com" class="endlogo"><img src="resources/signedon-logo.png"  /></a>
   </div>
   <script id="scores-template" type="text/x-handlebars-template">
       {{#scores}}
@@ -95,6 +95,18 @@
         {{/if}}
       {{/scores}}
   </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27818174-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </body>
 </html>

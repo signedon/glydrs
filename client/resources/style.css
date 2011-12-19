@@ -102,8 +102,16 @@ canvas.active{
   top: 0;
   left:0;
   width: 200px;
+  border: none;
+}
+.sologo img{
+  border: none;
 }
 .endlogo{
   margin: 20px auto 0;
   width: 200px;
+  border: none;
+}
+.endlogo img{
+  border: none;
 }
